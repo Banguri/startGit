@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* ================================== garden ================================== */
+#garden {
+	overflow: hidden;
+	.contentWrap {
+		@include posAbsoluteLT(232px, 92px, auto, auto);
+	}
+	.guidemap {
+		color: #6ed8ff;
+	}
+	.contentPhotoFade {
+		@include posAbsoluteLT(232px, 0, 1750px, 100%);
+		z-index: 1;
+		.photoSlide {
+			.slick-prev,
+			.slick-next {
+				top: 499px;
+				left: 361px;
+			}
+		}
+	}
+	.gardenBg {
+		@include posAbsoluteLT(0, 0, 722px, 499px);
+		background: #08358e;
+		z-index: 3;
+	}
+	.gardenFrame {
+		@include posAbsoluteLT(722px, 303px, 210px, 196px);
+		@include boxShadow;
+		background: url('../img/garden_frame.jpg') no-repeat center center;
+		z-index: 2;
+	}
+}

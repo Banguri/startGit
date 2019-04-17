@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* ================================== zone ================================== */
+#brencia {
+	.keyword {
+		@include posAbsoluteRT(78px, 86px, auto, auto);
+		text-align: right;
+		color: #ffae00;
+	}
+	.contentWrap {
+		@include posAbsoluteLT(234px, 180px, auto, auto);
+	}
+	.guidemap {
+		color: #e73825;
+		&:before {
+			background-position: -20px 0;
+		}
+	}
+	.contentPhoto {
+		@include posAbsoluteRT(173px, 180px, 547px, 335px);
+		border: 2px solid #111;
+		z-index: 4;
+		.photoSlide {
+			.slick-prev,
+			.slick-next {
+				bottom: -2px;
+				left: -2px;
+			}
+		}
+	}
+	.brenciaVisual {
+		@include posAbsoluteRT(60px, 363px, 300px, 240px);
+		background: url('../img/brencia_visual.png') no-repeat center center;
+		z-index: 5;
+	}
+	.brenciaPetal {
+		@include posAbsoluteLB(257px, 90px, 290px, 130px);
+		background: url('../img/brencia_petal.png') no-repeat center center;
+		z-index: 6;
+	}
+	.brenciaBg {
+		@include posAbsoluteRT(-92px, 0, 934px, 100%);
+		background: #ffe324;
+		z-index: 1;
+	}
+}
+
+#holland {
+	.keyword {
+		@include posAbsoluteRT(78px, 86px, auto, auto);
+		text-align: right;
+	}
+	.contentWrap {
+		@include posAbsoluteLT(882px, 647px, auto, auto);
+		.contentInner {
+			.subTitle {
+				padding-bottom: 0;
+				img {
+					margin-left: -514px;
+				}
+			}
+			.subText {
+				margin-top: -110px;
+			}
+		}
+	}
+	.btnTimeTable {
+		@include posAbsoluteLT(1080px, 497px, 179px, 67px);
+		background: url('../img/btn_time_table.png') no-repeat center center;
+		@include boxShadow;
+		z-index: 4;
+	}
+	.btnComingSoon {
+		@include posAbsoluteLT(1080px, 497px, 210px, 67px);
+		background: url('../img/btn_coming_soon.png') no-repeat center center;
+		@include boxShadow;
+		z-index: 4;
+	}
+	.hollandVisual {
+		@include posAbsoluteLT(92px, 0, 1108px, 545px);
+		background: url('../img/holland_visual.jpg') no-repeat center center;
+		z-index: 1;
+	}
+	.hollandFrame {
+		@include posAbsoluteRT(80px, 180px, 154px, 230px);
+		background: url('../img/holland_frame.jpg') no-repeat center center;
+		z-index: 2;
+	}
+	.hollandLeaf {
+		@include posAbsoluteLT(1065px, 20px, 248px, 170px);
+		background: url('../img/holland_leaf.png') no-repeat center center;
+		z-index: 3;
+	}
+	.hollandLogo {
+		@include posAbsoluteLT(893px, 754px, 114px, 59px);
+		background: url('../img/holland_logo.png') no-repeat center center;
+		z-index: 8;
+	}
+}
+
+#fairy {
+	.keyword {
+		@include posAbsoluteLB(143px, 128px, auto, auto);
+		color: #f9504a;
+	}
+	.contentWrap {
+		@include posAbsoluteLT(get-per(208px), 180px, auto, auto);
+	}
+	.guidemap {
+		color: #ffe21c;
+		&:before {
+			background-position: -40px 0;
+		}
+	}
+	.contentPhoto {
+		@include posAbsoluteLT(872px, 180px, 659px, 467px);
+		z-index: 2;
+		.photoSlide {
+			.slick-prev,
+			.slick-next {
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+	.btnFairyTime {
+		@include posAbsoluteLT(1457px, 0, 136px, 176px);
+		background: url('../img/btn_fairy_time.png') no-repeat center center;
+		z-index: 10;
+	}
+	.fairyFrame {
+		@include posAbsoluteLT(662px, 647px, 210px, 124px);
+		background: url('../img/fairy_frame.jpg') no-repeat center center;
+		@include boxShadow;
+		z-index: 3;
+	}
+	.fairyBg {
+		@include posAbsoluteLT(0, 0, 933px, 100%);
+		background: #dc2923;
+		z-index: 1;
+	}
+	.tulipTulip {
+		@include posAbsoluteRB(-264px, 0, 500px, 356px);
+		background: url('../img/tulip_tulip.png') no-repeat center center;
+		z-index: 7;
+	}
+}

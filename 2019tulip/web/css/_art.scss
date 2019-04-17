@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* ================================== art ================================== */
+#illusion {
+	.contentWrap {
+		@include posAbsoluteLT(get-per(244px), 146px, auto, auto);
+	}
+	.guidemap {
+		color: #e73825;
+		&:before {
+			background-position: -20px 0;
+		}
+	}
+	.contentPhoto {
+		@include posAbsoluteRT(0, -2px, 733px, 547px);
+		border: 2px solid #111;
+		z-index: 4;
+		.photoSlide {
+			.slick-prev,
+			.slick-next {
+				bottom: -2px;
+				left: -2px;
+			}
+		}
+	}
+	.btnArtTip {
+		@include posAbsoluteLT(get-per(244px), 680px, 285px, 67px);
+		background: url('../img/btn_art_tip.png') no-repeat center center;
+		@include boxShadow;
+		z-index: 10;
+	}
+	.illusionKeyword {
+		@include posAbsoluteRT(263px, 647px, 224px, 124px);
+		background: url('../img/illusion_keyword.png') no-repeat center center;
+		z-index: 3;
+	}
+	.illusionLeaf1 {
+		@include posAbsoluteLT(104px, 756px, 230px, 240px);
+		background: url('../img/illusion_leaf1.png') no-repeat center center;
+		z-index: 9;
+	}
+	.illusionLeaf2 {
+		@include posAbsoluteLB(113px, 326px, 76px, 72px);
+		background: url('../img/illusion_leaf2.png') no-repeat center center;
+		z-index: 8;
+	}
+	.illusionFrame {
+		@include posAbsoluteRT(511px, 545px, 222px, 226px);
+		background: url('../img/illusion_frame.png') no-repeat center center;
+		z-index: 3;
+	}
+	.illusionBg {
+		@include posAbsoluteRT(0, 0, 604px, 100%);
+		background: #dc2923;
+		z-index: 1;
+	}
+}
+
+#tulip {
+	.tulipVisual {
+		@include posAbsoluteLT(0, 0, 100%, 100%);
+		min-width: 1135px;
+		background: url('../img/tulip_visual.jpg') no-repeat center center;
+		background-size: cover;
+		z-index: 1;
+	}
+	.nextArrow {
+		@include posAbsoluteRT(0, 50%, 181px, 86px);
+		@include translate(0, -50%);
+		background: #fefefe url('../img/guide_scroll.png') no-repeat center center;
+		box-sizing: border-box;
+		cursor: pointer;
+		z-index: 8;
+	}
+	.guideScroll {
+		top: 50%;
+		@include translate(0, -50%);
+	}
+}

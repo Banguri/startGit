@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* ================================== base ================================== */
+/* font */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+/* base */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, menu, nav, section, main, summary, 
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+	background: transparent;
+	font-size: 100%;
+}
+body {
+	color: #333;
+	font-family: $fontFamily;
+	font-weight: 300;
+	line-height: 1.5; 
+	letter-spacing: -0.05em;
+}
+ul, ol {
+	list-style-type: none;
+}
+img {
+	vertical-align: top;
+}
+a {
+	box-sizing: border-box;
+	color: #333;
+	text-decoration: none;
+	&:hover,
+	&:active {
+		text-decoration: none;
+	}
+}
+button {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 0 none;
+	background-color: transparent;
+	vertical-align: middle;
+	color: #333;
+	font-family: $fontFamily;
+	font-weight: 300;
+	cursor: pointer;
+	outline: none;
+}
+figcaption {
+	display: none;
+}
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

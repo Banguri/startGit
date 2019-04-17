@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* ================================== parade ================================== */
+#parade {
+	.keyword {
+		@include posAbsoluteRB(118px, 102px, auto, auto);
+		text-align: right;
+		color: #2862d2;
+	}
+	.contentWrap {
+		@include posAbsoluteLT(844px, 88px, auto, auto);
+		.contentInner {
+			.subTitle {
+				padding-bottom: 0;
+				img {
+					margin-left: -574px;
+				}
+			}
+			.caution {
+				margin-top: -56px;
+			}
+		}
+	}
+	.guidemap {
+		color: #6dd7ff;
+	}
+	.contentTab {
+		width: 100%;
+		height: 100%;
+		padding: 303px 0 0 334px;
+		z-index: 9;
+		.tabWrap {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background: #08368e;
+			.tabContent {
+				display: none;
+				padding: 60px 0 0 82px;
+				@include clearfix;
+				.tabItem {
+					float: left;
+					width: 450px;
+					color: #d6e4ff;
+					font-size: 18px;
+					font-weight: 300;
+					line-height: 1.7;
+					.photo {
+						position: relative;
+						img {
+							border: 2px solid #111;
+						}
+						.btnGallery {
+							@include posAbsoluteRB(40px, 0, 66px, 62px);
+							background: url('../img/btn_gallery.png') no-repeat center center;
+						}
+					}
+					dl {
+						margin-top: 30px;
+						dt {
+							margin-bottom: 8px;
+							font-size: 22px;
+							font-weight: 400;
+						}
+						dd {
+							min-height: 60px;
+						}
+					}
+					.infoWrap {
+						margin-top: 9px;
+						li {
+							&:before {
+								background-color: #d6e4ff;
+							}
+							span {
+								&:after {
+									background-color: #3b5aca;
+								}
+							}
+						}
+					}
+				}
+			}
+			.tabTitle {
+				position: absolute;
+				top: -58px;
+				a {
+					position: relative;
+					display: block;
+					width: 510px;
+					height: 58px;
+					line-height: 58px;
+					text-align: center;
+					color: #8d8d8d;
+					font-size: 18px;
+					font-weight: 400;
+					background: #dbdbdb;
+				}
+				&.isActive {
+					a {
+						color: #fff;
+						background: #08368e;
+						&:after {
+							content: '';
+							@include posAbsoluteLB(50%, 0, auto, 1px);
+							@include translate(-50%, 0);
+							background: #2862d1;
+						}
+					}
+					& + .tabContent {
+						display: block;
+					}
+				}
+				&.parade {
+					left: 0;
+					a {
+						&:after {
+							width: 94px;
+						}
+					}
+				}
+				&.show {
+					left: 510px;
+					a {
+						&:after {
+							width: 62px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.btnParadeTime {
+		@include posAbsoluteLT(1237px, 0, 136px, 176px);
+		background: url('../img/btn_parade_time.png') no-repeat center center;
+		z-index: 10;
+	}
+	.paradeTulip {
+		@include posAbsoluteLB(-242px, 0, 500px, 340px);
+		background: url('../img/parade_tulip.png') no-repeat center center;
+		z-index: 7;
+	}
+	.paradeLeaf1 {
+		@include posAbsoluteRT(50px, 254px , 265px, 171px);
+		background: url('../img/parade_leaf1.png') no-repeat center center;
+		z-index: 9;
+	}
+	.paradeLeaf2 {
+		@include posAbsoluteLT(1207px, 48px, 62px, 70px);
+		background: url('../img/parade_leaf2.png') no-repeat center center;
+		z-index: 11;
+	}
+}

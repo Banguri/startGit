@@ -1,0 +1,532 @@
+@charset "utf-8";
+/* ================================== common ================================== */
+html, 
+body {
+	position: relative;
+	height: 100%;
+}
+
+/* position */
+.posRelative {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.posAbsolute {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/* webzineWrap */
+#webzineWrap {
+	position: relative;
+	height: 100%;
+}
+/* header */
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 92px;
+	height: 100%;
+	border: 2px solid #111;
+	background: #fdfdfd;
+	box-sizing: border-box;
+	z-index: 99;
+	h1 {
+		border-bottom: 2px solid #111;
+	}
+	#nav {
+		.gnb {
+			margin-top: 10px;
+			li {
+				display: block;
+				width: 100%;
+				background: url('../img/gnb.png') no-repeat 0 0;
+				border-radius: 0;
+				&.menu0 {
+					height: $mainGnbH;
+					background-position: 0 0;
+				} // 메인
+				&.menu1 {
+					height: $gardenGnbH;
+					background-position: 0 $gardenGnbPos;
+				} // 포시즌스 가든
+				&.menu2 {
+					height: $illusionGnbH;
+					background-position: 0 $illusionGnbPos;
+				} // 아트 스튜디오
+				&.menu3 {
+					display: none;
+				} // TULIP
+				&.menu4 {
+					height: $fairyGnbH;
+					background-position: 0 $fairyGnbPos;
+				} // 페어리 인 아트
+				&.menu5 {
+					height: $brenciaGnbH;
+					background-position: 0 $brenciaGnbPos;
+				} // 브렌시아 존
+				&.menu6 {
+					height: $hollandGnbH;
+					background-position: 0 $hollandGnbPos;
+				} // 할로! 홀란드
+				&.menu7 {
+					height: $paradeGnbH;
+					background-position: 0 $paradeGnbPos;
+				} // 퍼레이드&공연
+				&.menu8 {
+					height: $fnbGnbH;
+					background-position: 0 $fnbGnbPos;
+				} // F&B
+				&.menu9 {
+					height: $mdGnbH;
+					background-position: 0 $mdGnbPos;
+				} // MD
+			}
+		}
+	}
+}
+
+/* Section */
+section {
+	position: relative;
+	height: 100%;
+}
+/* keyword */
+.keyword {
+	color: #c6c6c6;
+	font-family: $fontFamilyMontserrat;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	z-index: 11;
+}
+/* content */
+.contentWrap {
+	z-index: 10;
+	.contentInner {
+		position: relative;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 1.7;
+	}
+}
+
+.subTitle {
+	padding-bottom: 32px;
+	img {
+		margin-top: -2px;
+		margin-left: -64px;
+	}
+}
+.subText {
+	padding-bottom: 3px;
+	p {
+		padding: 5px 0;
+	}
+}
+p {
+	position: relative;
+}
+.infoWrap {
+	li {
+		position: relative;
+		padding-bottom: 1px;
+		padding-left: 55px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 14px;
+			left: 0;
+			display: block;
+			width: 2px;
+			height: 2px;
+			margin-bottom: 1px;
+		}
+		span {
+			position: absolute;
+			top: 0;
+			left: 5px;
+			display: block;
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 1px;
+				height: 7px;
+				margin-left: 8px;
+				margin-bottom: 4px;
+			}
+		}
+		img {
+			vertical-align: middle;
+			margin: -2px 0 2px 6px;
+		}
+	}
+}
+.guidemap {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 3px;
+	font-style: normal;
+	font-family: $fontFamilyMontserrat;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0;
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 12px;
+		height: 16px;
+		margin: 0 4px -2px 5px;
+		background: url('../img/icon_guidemap.png') no-repeat 0 0;
+	}
+}
+.caution {
+	margin-top: 35px;
+	li {
+		position: relative;
+		padding-bottom: 1px;
+		padding-left: 10px;
+		font-size: 16px;
+		&:before {
+			content: '*';
+			position: absolute;
+			top: 4px;
+			left: 0;
+			display: block;
+		}
+	}
+}
+.subText {
+	& + .caution {
+		margin-top: 10px;
+	}
+}
+
+/* content theme */
+@each $map, $value in $mapContentColor {
+	##{$map} {
+		.contentWrap {
+			.contentInner {
+				color: map-get($value, textMainColor);
+			}
+		}
+		.infoWrap {
+			li {
+				&:before {
+					background-color: map-get($value, textMainColor);
+				}
+				span {
+					&:after {
+						background-color: map-get($value, lineColor);
+					}
+				}
+			}
+		}
+		.caution {
+			li {
+				color: map-get($value, textSubColor);
+			}
+		}
+	}
+}
+.guideScroll {
+	@include posAbsoluteRT(0, 0, 181px, 86px);
+	background: url('../img/guide_scroll.png') no-repeat center center;
+	z-index: 10;
+}
+
+/* layer popop modal */
+.modalOverlay {
+	display: none;
+	@include posFixedFull;
+	background: #000;
+	opacity: 0;
+	z-index: 9998;
+}
+.popupWrap {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 0;
+	@include translate(-50%, 0);
+	opacity: 0;
+	z-index: 9999;
+}
+.photoSlide,
+.photoSlide img {
+	width: 100%;
+	height: 100%;
+}
+.popupPhoto {
+	width: 764px;
+	height: 539px;
+	padding: 3px 3px 49px 50px;
+	background: url('../img/popup_photo_frame.png') no-repeat center center;
+	.photoSlide {
+		.slick-prev,
+		.slick-next {
+			bottom: -49px;
+			left: 585px;
+		}
+	}
+}
+.popupContent {
+	width: 764px;
+	height: 539px;
+	padding: 31px 3px 33px 3px;
+	background: url('../img/popup_content_frame.png') no-repeat center center;
+	.timeListWrap {
+		overflow-y: auto;
+		height: 475px;
+		padding: 50px 70px 0;
+		.popTit {
+			img {
+				margin: 3px 0 50px;
+			}
+		}
+		.notes {
+			position: relative;
+			padding-left: 10px;
+			color: #999;
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 1.7;
+			&:before {
+				content: '*';
+				position: absolute;
+				top: 4px;
+				left: 0;
+				display: block;
+			}
+			&.em {
+				color: #2d58ad;
+			}
+		}
+		.timeList {
+			border-top: 2px solid #111;
+			border-bottom: 2px solid #111;
+			.item {
+				padding: 30px 0 30px 132px;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 1.7;
+				border-top: 1px solid #cbcbcb;
+				&:first-child {
+					border-top: none;
+				}
+				h4 {
+					img {
+						margin: 3px 0 15px -132px;
+					}
+				}
+				.infoWrap {
+					margin-top: 16px;
+					li {
+						&:before {
+							background-color: #444;
+						}
+						span {
+							&:after {
+								background-color: #bbb;
+							}
+						}
+					}
+					& + .notes {
+						margin-top: 15px;
+					}
+				}
+				.guidemap {
+					color: #08358e;
+					&:before {
+						background-position: -60px 0;
+					}
+				}
+				&.bg1 {
+					background: url('../img/time_photo1.jpg') no-repeat right 34px;
+
+				}
+				&.bg2 {
+					background: url('../img/time_photo2.jpg') no-repeat right 34px;
+
+				}
+				&.bg3 {
+					background: url('../img/time_photo3.jpg') no-repeat right 34px;
+
+				}
+				&.bg4 {
+					background: url('../img/time_photo4.jpg') no-repeat right 34px;
+				}
+			}
+			& + .notes {
+				margin-top: 25px;
+				padding-bottom: 50px;
+			}
+		}
+	}
+}
+.popupClose {
+	@include posAbsoluteRT(64px, -31px, 66px, 62px);
+	background: #111 url('../img/btn_photo_close.png') no-repeat center center;
+}
+
+/***** Slick Style Custom *****/
+/** Arrows **/
+.slick-prev,
+.slick-next {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	display: block;
+	width: 66px;
+	height: 62px;
+	padding: 0;
+	cursor: pointer;
+	color: transparent;
+	border: 3px solid #111;
+	outline: none;
+	background: transparent;
+	z-index: 99999;
+}
+.slick-disabled {
+	opacity: 0;
+}
+/** Dot **/
+.slick-dots {
+	position: absolute;
+	left: 50%;
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index: 99999;
+	li {
+		position: relative;
+		display: inline-block;
+		padding: 0;
+		cursor: pointer;
+		button {
+			position: relative;
+			display: block;
+			cursor: pointer;
+			color: transparent;
+			font-size: 0;
+			line-height: 0;
+			border: 0;
+			outline: none;
+			&:hover,
+			&:focus {
+				outline: none;
+				&:before {
+					opacity: 1;
+				}
+			}
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				content: '';
+				text-align: center;
+				border-radius: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+.photoSlide {
+	.slick-prev {
+		background: #e6e6e6 url('../img/icon_arrow.png') no-repeat 0 0;
+	}
+	.slick-next {
+		margin-left: 63px;
+		background: #ffe324 url('../img/icon_arrow.png') no-repeat -60px 0;
+	}
+	.slick-dots {
+		bottom: -39px;
+		li {
+			padding: 0;
+			button {
+				width: 29px;
+				height: 29px;
+				padding: 10px;
+				background: transparent;
+				&:before {
+					width: 9px;
+					height: 9px;
+					background: #f67e7b;
+					box-sizing: border-box;
+				}
+			}
+			&.slick-active {
+				button {
+					&:before {
+						background: #fdfdfd;
+					}
+				}
+			}
+		}
+	}
+}
+
+/***** Swiper Style Custom *****/
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 2px solid #000;
+	box-sizing: border-box;
+}
+.swiper-slide {
+	background: #fefefe;
+}
+.swiper-pagination-bullet {
+	display: block;
+	width: auto;
+	height: auto;
+	padding: 0;
+	color: #333;
+	background: none;
+	opacity: 1;
+}
+.swiper-pagination-bullet-active {
+	&:after {
+		top: 32px !important;
+		width: 100% !important;
+		height: 5px !important;
+	}
+}
+.nextArrow {
+	@include posAbsoluteRT(0, 0, 181px, 86px);
+	background: url('../img/guide_scroll.png') no-repeat center center;
+	cursor: pointer;
+	box-sizing: border-box;
+	@include transition(all, 0.3s, ease);
+	z-index: 99;
+}
+.contentProgress {
+	position: absolute;
+	left:0;
+	bottom:0;
+	width: 100%;
+	height: 7px;
+	border-bottom: 2px solid #111;
+	box-sizing: border-box;
+	background: #d6d6d6;
+	z-index:10;
+}
+.progressbar {
+	display: block;
+	width: 100%;
+	height: 5px;
+	@include transition(all, 2.4s, ease);
+	background: #e83724;
+}

@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* ================================== main ================================== */
+#main {
+	.keyword {
+		@include posAbsoluteLT(170px, 85px, auto, auto);
+	}
+	.mainTitle {
+		@include posAbsoluteLT(221px, 230px, 466px, 406px);
+		background: url('../img/main_title.png') no-repeat center center;
+		z-index: 3;
+	}
+	.mainTulip {
+		@include posAbsoluteRT(0, -2px, 809px, 773px);
+		background: url('../img/main_tulip.jpg') no-repeat center center;
+		z-index: 1;
+	}
+	.mainLeaf1 {
+		@include posAbsoluteLT(615px, 54px, 320px, 200px);
+		background: url('../img/main_leaf1.png') no-repeat center center;
+		z-index: 2;
+	}
+	.mainLeaf2 {
+		@include posAbsoluteLT(480px, 641px, 130px, 100px);
+		background: url('../img/main_leaf2.png') no-repeat center center;
+		z-index: 4;
+	}
+	.nextArrow {
+		top: 413px;
+	}
+}

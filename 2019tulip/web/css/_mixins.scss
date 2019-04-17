@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin boxShadow {
+	box-shadow: 0 20px 28px rgba(0,0,0,.3);
+	-moz-box-shadow: 0 20px 28px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 20px 28px rgba(0,0,0,.3);
+}
+
+@mixin posFixedFull {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+}
+
+@mixin posAbsoluteLT($left, $top, $width, $height) {
+	position: absolute;
+	left: $left;
+	top: $top;
+	display: block;
+	width: $width;
+	height: $height;
+}
+
+@mixin posAbsoluteLB($left, $bottom, $width, $height) {
+	position: absolute;
+	left: $left;
+	bottom: $bottom;
+	display: block;
+	width: $width;
+	height: $height;
+}
+
+@mixin posAbsoluteRT($right, $top, $width, $height) {
+	position: absolute;
+	right: $right;
+	top: $top;
+	display: block;
+	width: $width;
+	height: $height;
+}
+
+@mixin posAbsoluteRB($right, $bottom, $width, $height) {
+	position: absolute;
+	right: $right;
+	bottom: $bottom;
+	display: block;
+	width: $width;
+	height: $height;
+}
+
+@mixin VideoFrame($vfTop, $vfRight, $vfBottom, $vfLeft, $vfWidth, $vfHeight) {
+	position: absolute; 
+	top: $vfTop; 
+	right: $vfRight; 
+	bottom: $vfBottom; 
+	left: $vfLeft;
+	display: block; 
+	width: $vfWidth; 
+	height: $vfHeight;
+}
+
+@mixin transition($element, $duration, $timing) {
+	transition: $element $duration $timing;
+	-webkit-transition: $element $duration $timing;
+	-moz-transition: $element $duration $timing;
+	-o-transition: $element $duration $timing;
+}
+
+@mixin translate($translateX, $translateY) {
+transform: translate($translateX, $translateY);
+-ms-transform: translate($translateX, $translateY);
+-webkit-transform: translate($translateX, $translateY);
+}
+
+
+@function get-per($object) {
+	@return ($object / $contentWidth) * 100%;
+}

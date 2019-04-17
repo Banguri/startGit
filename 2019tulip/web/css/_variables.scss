@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+// Font
+$fontFamily: "Noto Sans KR", "Malgun Gothic", Dotum, sans-serif;
+$fontFamilyMontserrat: 'Montserrat', sans-serif;
+
+// Content Width
+$contentWidth: 1600px;
+
+// Garden Color
+$gardentextMainColor: #d6e4ff;
+$gardentextSubColor: #d6e4ff;
+$gardenLineColor: #3b5aca;
+
+// illusion Color
+$illusiontextMainColor: #444;
+$illusiontextSubColor: #999;
+$illusionLineColor: #bbb;
+
+// Zone Color
+$brenciatextMainColor: #444;
+$brenciatextSubColor: #999;
+$brenciaLineColor: #bbb;
+
+$hollandtextMainColor: #444;
+$hollandtextSubColor: #999;
+$hollandLineColor: #bbb;
+
+$fairytextMainColor: #f7dddd;
+$fairytextSubColor: #ffaeab;
+$fairyLineColor: #ff615c;
+
+// Parade Color
+$paradetextMainColor: #444;
+$paradetextSubColor: #999;
+$paradeLineColor: #bbb;
+
+// fnb Color
+$fnbtextMainColor: #444;
+$fnbtextSubColor: #999;
+$fnbLineColor: #bbb;
+
+// md Color
+$mdtextMainColor: #444;
+$mdtextSubColor: #999;
+$mdLineColor: #bbb;
+
+// Content Color Map
+$mapContentColor: (
+	garden: (textMainColor: $gardentextMainColor, textSubColor: $gardentextSubColor, lineColor: $gardenLineColor),
+	illusion: (textMainColor: $illusiontextMainColor, textSubColor: $illusiontextSubColor, lineColor: $illusionLineColor),
+	brencia: (textMainColor: $brenciatextMainColor, textSubColor: $brenciatextSubColor, lineColor: $brenciaLineColor),
+	holland: (textMainColor: $hollandtextMainColor, textSubColor: $hollandtextSubColor, lineColor: $hollandLineColor),
+	fairy: (textMainColor: $fairytextMainColor, textSubColor: $fairytextSubColor, lineColor: $fairyLineColor),
+	parade: (textMainColor: $paradetextMainColor, textSubColor: $paradetextSubColor, lineColor: $paradeLineColor),
+	fnb: (textMainColor: $fnbtextMainColor, textSubColor: $fnbtextSubColor, lineColor: $fnbLineColor),
+	md: (textMainColor: $mdtextMainColor, textSubColor: $mdtextSubColor, lineColor: $mdLineColor),
+);
+
+
+// GNB
+
+$mainGnbH: 75px;
+$gardenGnbH: 75px;
+$illusionGnbH: 76px;
+$fairyGnbH: 74px;
+$brenciaGnbH: 74px;
+$hollandGnbH: 72px;
+$paradeGnbH: 77px;
+$fnbGnbH: 69px;
+$mdGnbH: 68px;
+
+$gardenGnbPos: -($mainGnbH);
+$illusionGnbPos: -($mainGnbH+$gardenGnbH);
+$fairyGnbPos: -($mainGnbH+$gardenGnbH+$illusionGnbH);
+$brenciaGnbPos: -($mainGnbH+$gardenGnbH+$illusionGnbH+$fairyGnbH);
+$hollandGnbPos: -($mainGnbH+$gardenGnbH+$illusionGnbH+$fairyGnbH+$brenciaGnbH);
+$paradeGnbPos: -($mainGnbH+$gardenGnbH+$illusionGnbH+$fairyGnbH+$brenciaGnbH+$hollandGnbH);
+$fnbGnbPos: -($mainGnbH+$gardenGnbH+$illusionGnbH+$fairyGnbH+$brenciaGnbH+$hollandGnbH+$paradeGnbH);
+$mdGnbPos: -($mainGnbH+$gardenGnbH+$illusionGnbH+$fairyGnbH+$brenciaGnbH+$hollandGnbH+$paradeGnbH+$fnbGnbH);
