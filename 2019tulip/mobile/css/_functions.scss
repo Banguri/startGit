@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+@function get-vw($object) {
+	$vw: (760 * 0.01) * 1px;
+	@return ($object / $vw) * 1vw;
+}
+
+@function get-per-w($object) {
+	@return ($object / $viewportWidth) * 100%;
+}
+
+@function get-per-h($object) {
+	@return ($object / $viewportHeight) * 100%;
+}
+
+@function get-half($object) {
+	@return $object / 2;
+}
+
+@function get-per-w($object) {
+	@return ($object / $viewportWidth) * 100%;
+}
+
+@function get-per-h($object) {
+	@return ($object / $viewportHeight) * 100%;
+}
+
+@function get-per-h-main($object) {
+	@return ($object / $mainHeight) * 100%;
+}
+@function get-per-h-garden($object) {
+	@return ($object / $gardenHeight) * 100%;
+}
+@function get-per-h-illusion($object) {
+	@return ($object / $illusionHeight) * 100%;
+}
+@function get-per-h-tulip($object) {
+	@return ($object / $tulipHeight) * 100%;
+}
+@function get-per-h-brencia($object) {
+	@return ($object / $brenciaHeight) * 100%;
+}
+@function get-per-h-holland($object) {
+	@return ($object / $hollandHeight) * 100%;
+}
+@function get-per-h-fairy($object) {
+	@return ($object / $fairyHeight) * 100%;
+}
+@function get-per-h-parade($object) {
+	@return ($object / $paradeHeight) * 100%;
+}
+@function get-per-h-fnb($object) {
+	@return ($object / $fnbHeight) * 100%;
+}
+@function get-per-h-md($object) {
+	@return ($object / $mdHeight) * 100%;
+}
+
+@function get-per-h-parade-content($object) {
+	@return ($object / $paradeContentHeight) * 100%;
+}

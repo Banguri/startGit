@@ -1,0 +1,278 @@
+@charset "utf-8";
+/* ================================== content ================================== */
+#main {
+	.mainContent {
+		@include posAbsoluteLT(0, 0, 100%, auto);
+		z-index: 1;
+	}
+}
+
+#garden {
+	.contentPhotoFade {
+		@include posAbsoluteLT(0, 0, 100%, auto);
+		z-index: 1;
+		.photoSlide {
+			.slick-prev,
+			.slick-next {
+				bottom: get-per-h-garden(818px);
+				left: get-per-w(210px);
+			}
+		}
+	}
+	.gardenFrame {
+		@include posAbsoluteLB(0, get-per-h-garden(818px), get-per-w(210px), auto);
+		@include boxShadow;
+		z-index: 3;
+	}
+	.gardenContent {
+		@include posAbsoluteLB(0, 0, get-per-w(640px), auto);
+		z-index: 2;
+	}
+}
+
+#illusion {
+	.illusionContent {
+		@include posAbsoluteLB(0, 0, 100%, auto);
+		z-index: 1;
+	}
+	.contentPhoto {
+		@include posAbsoluteRT(0, -1px, get-per-w(542px), get-per-h-illusion(447px));
+		border: 1px solid #111;
+		box-sizing: border-box;
+		z-index: 2;
+		.photoSlide {
+			.slick-prev,
+			.slick-next {
+				bottom: -1px;
+				left: -1px;
+			}
+		}
+	}
+	.btnArtTip {
+		@include posAbsoluteLT(get-per-w(80px), get-per-h-illusion(1442px), get-per-w(380px), auto);
+		@include boxShadow;
+		z-index: 2;
+	}
+}
+
+#tulip {
+	.tulipContent {
+		@include posAbsoluteLT(0, 0, 100%, 100%);
+		background: url('../img/tulip_content.jpg') no-repeat center center;
+		background-size: cover;
+		z-index: 1;
+	}
+}
+
+#brencia {
+	.brenciaContent {
+		@include posAbsoluteLT(0, 0, 100%, auto);
+		z-index: 1;
+	}
+	.contentPhoto {
+		@include posAbsoluteLT(get-per-w(80px), get-per-h-brencia(164px), get-per-w(430px), get-per-h-brencia(294px));
+		border: 1px solid #111;
+		box-sizing: border-box;
+		z-index: 2;
+		.photoSlide {
+			.slick-prev,
+			.slick-next {
+				top: -43px;
+				left: -1px;
+			}
+		}
+	}
+	.brenciaVisual {
+		@include posAbsoluteRT(get-per-w(40px), get-per-h-brencia(356px), get-per-w(296px), auto);
+		z-index: 3;
+	}
+}
+
+#holland {
+	.hollandContent {
+		@include posAbsoluteLT(0, 0, 100%, auto);
+		z-index: 1;
+	}
+	.btnTimeTable {
+		@include posAbsoluteRT(get-per-w(80px), get-per-h-holland(268px), get-per-w(220px), auto);
+		@include boxShadow;
+		z-index: 2;
+	}
+	.btnComingSoon {
+		@include posAbsoluteRT(get-per-w(80px), get-per-h-holland(268px), get-per-w(276px), auto);
+		@include boxShadow;
+		z-index: 2;
+	}
+}
+
+#fairy {
+	.fairyContent {
+		@include posAbsoluteLT(0, 0, 100%, auto);
+		z-index: 1;
+	}
+	.contentPhoto {
+		@include posAbsoluteRB(0, get-per-h-fairy(178px), get-per-w(640px), get-per-h-fairy(466px));
+		box-sizing: border-box;
+		z-index: 2;
+		.photoSlide {
+			.slick-prev,
+			.slick-next {
+				left: 0;
+				bottom: 0;
+			}
+		}
+	}
+	.btnParadeTime {
+		@include posAbsoluteRT(0, 0, get-per-w(250px), auto);
+		z-index: 4;
+	}
+}
+
+#parade {
+	.paradeContent1 {
+		@include posAbsoluteLT(0, 0, 100%, auto);
+		z-index: 1;
+	}
+	.paradeContent2 {
+		@include posAbsoluteLT(0, get-per-h-parade(580px), 100%, auto);
+		display: none;
+		background: #08368e;
+		z-index: 2;
+		&.parade {
+			.btnGallery1 {
+				@include posAbsoluteRT(get-per-w(80px), get-per-h-parade-content(382px), get-per-w(86px), auto);
+			}
+			.btnGallery2 {
+				@include posAbsoluteRT(get-per-w(80px), get-per-h-parade-content(1087px), get-per-w(86px), auto);
+			}
+		}
+		&.show {
+			.btnGallery1 {
+				@include posAbsoluteRT(get-per-w(80px), get-per-h-parade-content(382px), get-per-w(86px), auto);
+			}
+			.btnGallery2 {
+				@include posAbsoluteRT(get-per-w(80px), get-per-h-parade-content(1087px), get-per-w(86px), auto);
+			}
+		}
+	}
+	.paradeTab {
+		z-index: 3;
+		&.parade {
+			@include posAbsoluteLT(0, get-per-h-parade(580px), get-per-w(360px), auto);
+		}
+		&.show {
+			@include posAbsoluteRT(0, get-per-h-parade(580px), get-per-w(360px), auto);
+		}
+		&.isActive {
+			& + .paradeContent2 {
+				display: block;
+			}
+		}
+	}
+	.btnParadeTime {
+		@include posAbsoluteRT(0, 0, get-per-w(250px), auto);
+		z-index: 4;
+	}
+}
+
+#fnb {
+	.fnbContent {
+		@include posAbsoluteLT(0, 0, 100%, auto);
+		z-index: 1;
+	}
+	.photoSlide {
+		.slideItem {
+			margin: 0 10px;
+			text-align: left;
+		}
+		img {
+			border: get-half(2px) solid #111;
+		}
+		.menu {
+			margin-top: 10px;
+			color: #444;
+			font-size: get-half(28px);
+		}
+		.place {
+			position: relative;
+			padding-left: get-half(30px);
+			font-size: get-half(25px);
+			font-weight: 400;
+			&:before {
+				content: '';
+				@include posAbsoluteLT(0, 4px, get-half(20px), get-half(26px));
+				background: url('../img/icon_place.png') no-repeat 0 0;
+				background-size: auto get-half(26px);
+			}
+		}
+	}
+	.food {
+		@include posAbsoluteLT(get-per-w(60px), get-per-h-fnb(480px), get-per-w(600px), get-per-h-fnb(400px));
+		z-index: 2;
+		.photoSlide {
+			.place {
+				color: #08368e;
+			}
+			.slick-prev {
+				top: 53px;
+				left: -10px;
+				background: #08368e url('../img/icon_arrow_food.png') no-repeat 0 0;
+				background-size: auto get-half(82px);
+			}
+			.slick-next {
+				top: 53px;
+				right: -10px;
+				background: #08368e url('../img/icon_arrow_food.png') no-repeat get-half(-82px) 0;
+				background-size: auto get-half(82px);
+			}
+		}
+	}
+	.beverage {
+		@include posAbsoluteLT(get-per-w(80px), get-per-h-fnb(1004px), get-per-w(600px), get-per-h-fnb(300px));
+		margin: 0 -10px;
+		z-index: 2;
+		.photoSlide {
+			.place {
+				color: #e73824;
+				&:before {
+					background-position: get-half(-30px) 0;
+				}
+			}
+			.slick-prev {
+				top: 18px;
+				left: -10px;
+				background: #e73824 url('../img/icon_arrow_beverage.png') no-repeat 0 0;
+				background-size: auto get-half(82px);
+			}
+			.slick-next {
+				top: 18px;
+				right: -10px;
+				background: #e73824 url('../img/icon_arrow_beverage.png') no-repeat get-half(-82px) 0;
+				background-size: auto get-half(82px);
+			}
+		}
+	}
+}
+
+#md {
+	.mdContent {
+		@include posAbsoluteLT(0, 0, 100%, auto);
+		z-index: 2;
+	}
+	.btnMdMall {
+		@include posAbsoluteLT(get-per-w(80px), get-per-h-md(574px), get-per-w(220px), auto);
+		@include boxShadow;
+		z-index: 3;
+	}
+	.mdVisual {
+		@include posAbsoluteLB(0, 0, 100%, 100%);
+		background: url('../img/md_visual.jpg') no-repeat center bottom;
+		background-size: 100% auto;
+		z-index: 1;
+	}
+}
+
+.guideScroll {
+	@include posAbsoluteRB(0, 0, get-per-w(370px), auto);
+	z-index: 2;
+}
