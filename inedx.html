@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Main Test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" media="all">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+  <style>
+    /* reset */
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+    strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form,
+    label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, textarea, button,
+    article, aside, canvas, details, embed, figure, figcaption, footer, header, menu,
+    nav, output, ruby, section, summary, time, mark, audio, video
+    { margin:0;padding:0;border:0;}
+    article, aside, details, figcaption, figure, footer, header, menu, nav, section { display: block;}
+    html {height:auto;-webkit-text-size-adjust: none;-moz-text-size-adjust: none;-ms-text-size-adjust: none; }
+    ol, ul {list-style: none;}
+    blockquote, q {quotes: none;}
+    blockquote:before, blockquote:after, q:before, q:after {content: '';content:none;}
+    table {border-collapse:collapse;border-spacing:0;}
+    a {text-decoration:none;color:inherit;}
+    a:hover {text-decoration:none;} 
+    legend, caption, hr {display:none;}
+    em {font-style:normal;}
+    img {vertical-align:top;max-width: 100%;}
+    input {vertical-align:middle;}
+    p,h3,h2,h1{letter-spacing: normal;}
+    input,textarea,button,select{ font-family:'Montserrat', sans-serif; }
+    section{width:100%;text-align: center;}
+    body{font-family:'Montserrat', sans-serif;width: 100%;height: 100%; color:#333333;min-width:1300px;    overflow: hidden;}
+
+    .main_wrap{/*padding-top: 71px;*/height: calc(100vh/* - 62px*/);overflow: hidden;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;min-height: 930px;}
+    .main_inner{width: 100%;height: 100%;position: relative;text-align: center}
+
+    .section{overflow: hidden}
+    .section .sec_inner{position: relative;;width: 100%;height: 100%;overflow: hidden}
+    .section .sec_inner>a{display: block;width: 100%;height: 100%}
+
+    .section .sec_inner .bg_area{width: 100%;height: 100%}
+    .section.sub_banner .sec_inner .bg_area:before{content: '';position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.35)}
+    .section .sec_inner .bg_area img{visibility: hidden;opacity: 0}
+    .section .sec_inner .decs{position: absolute;width: 100%;height: 100%;display: table;left: 0;top: 0;vertical-align: middle}
+    .section .sec_inner .decs .decs_inner{display: table-cell;vertical-align: middle}
+    .section .sec_inner .decs .decs_inner .copy{font-size:26px;line-height: 36px;color: #fff;font-weight: 300}
+    .section .sec_inner .decs .decs_inner .sub{font-size:13px;color: #fff ;margin-top: 20px;font-weight: 300}
+    .section .sec_inner .decs .decs_inner .sub img{height: 22px}
+    .section.sec4 .sec_inner .decs .decs_inner .sub{margin-top: 25px}
+
+    .section.all_img .sec_inner .decs{display: none}
+
+
+
+
+    .section .sec_inner{position: relative;;width: 100%;height: 798px;overflow: hidden;left: 50%;top: 50%;transform: translate(-50%, -50%)}
+    .main_wrap{height: calc(100vh/* - 65px*/);/*margin-top: 65px;*/padding-top: 0;min-height: calc(100vh/* - 65px*/);}
+    .main_wrap .wrap_inner {max-width: 1600px;margin: 0 auto}
+    .main_wrap .wrap_inner .section{width: 100%;height: calc(100vh/* - 65px*/);min-height: calc(100vh/* - 65px*/);overflow: hidden;background: #fff;position: relative;z-index: 9;}
+    .main_wrap .wrap_inner .section .sec_inner>div{position: absolute;}
+    .main_wrap .wrap_inner .section .copy_box{position: relative;height: 236px;min-width: 250px;width:380px;display: inline-block}
+    .main_wrap .wrap_inner .section .copy_box>a{position: relative;display: block;width: 100%;height: 100%;}
+    .main_wrap .wrap_inner .section .copy_box.enter .g_btn_view_more{opacity: 0.6;}
+    .main_wrap .wrap_inner .section .copy_box.enter .g_btn_view_more:before{right: -8px}
+    .main_wrap .wrap_inner .section .copy_box .copy_num{position: absolute;top: 0;left: 0;font-size: 260px;font-weight: 900;color: rgba(0,0,0,.05);line-height: 260px;letter-spacing: -10px;pointer-events: none;cursor: none}
+    .main_wrap .wrap_inner .section .copy_box .copy_area{position: absolute;bottom: 0;left: 0;padding-left: 47px}
+    .main_wrap .wrap_inner .section .copy_box .copy_area .copy_title{position:relative;font-weight: 900;font-size: 40px;line-height: 45px;color: #222;}
+    .main_wrap .wrap_inner .section .copy_box .copy_area .copy_sub_txt{position:relative;font-weight: 700;font-size: 17px;line-height: 26px;color: #444;margin-top: 7px;}
+    .main_wrap .wrap_inner .section .copy_box .copy_area .btn_more{position: relative;margin-top: 30px;}
+    .main_wrap .wrap_inner .section .img_box .img_area{position: relative;width: 100%;height: 100%;overflow:hidden;}
+    .main_wrap .wrap_inner .section .img_box .img_area .img_inner{position: relative;width: 100%;height: 698px;overflow: hidden;margin-top: 1px;}
+    .main_wrap .wrap_inner .section .img_box .img_area .img_inner>a{position: relative;width: 100%;height: 100%;display: block;cursor: none;
+        -webkit-transition: all 4s cubic-bezier(0,.79,.31,.78);
+        -moz-transition: all 4s cubic-bezier(0,.79,.31,.78);
+        -ms-transition: all 4s cubic-bezier(0,.79,.31,.78);
+        -o-transition: all 4s cubic-bezier(0,.79,.31,.78);
+        transition: all 4s cubic-bezier(0,.79,.31,.78);
+    }
+    .main_wrap .wrap_inner .section .img_box .img_area .img_inner.enter>a{transform: scale(1.07)}
+    .main_wrap .wrap_inner .section .btn_cursor{width: 60px;height: 60px;position: absolute;left: 0;top: 0;z-index: 11;}
+    .main_wrap .wrap_inner .section .btn_cursor div{position: absolute;left: 0;top: 0;visibility: hidden;opacity: 0;cursor: none;}
+    .main_wrap .wrap_inner .section .btn_cursor.next div{visibility: visible;opacity: 1}
+    .main_wrap .wrap_inner .section .btn_cursor.prev div{visibility: visible;opacity: 1}
+    .main_wrap .wrap_inner .section .btn_cursor.enter div{visibility: visible;opacity: 1}
+    .main_wrap .wrap_inner .section .sec_type1 {}
+    .main_wrap .wrap_inner .section .sec_type1 .img_box.left{left: 50%;margin-left: -800px;bottom:98px;width: 1000px;height: 700px;}
+    .main_wrap .wrap_inner .section .sec_type1 .copy_box.right{left: 50%;margin-left: 260px;bottom: 143px}
+    .main_wrap .wrap_inner .section .sec_type2 {}
+    .main_wrap .wrap_inner .section .sec_type2 .img_box.right{left: 50%;margin-left: -200px;bottom:98px;width: 1000px;height: 700px;}
+    .main_wrap .wrap_inner .section .sec_type2 .copy_box.left{left: 50%;margin-left: -615px;bottom: 143px}
+    .main_wrap .wrap_inner .section .sec_type3 {}
+    .main_wrap .wrap_inner .section .sec_type3 .img_box.left{left: 50%;margin-left: -800px;bottom:98px;width: 1000px;height: 700px;}
+    .main_wrap .wrap_inner .section .sec_type3 .copy_box.right{left: 50%;margin-left: 260px;bottom: 143px}
+    .main_wrap .wrap_inner .section .sec_type4 {}
+    .main_wrap .wrap_inner .section .sec_type4 .img_box.right{left: 50%;margin-left: -200px;bottom:98px;width: 1000px;height: 700px;}
+    .main_wrap .wrap_inner .section .sec_type4 .copy_box.left{left: 50%;margin-left: -615px;bottom: 143px}
+
+    .main_wrap .section_paging{position: fixed;right:0;width: 40px;height: 100px;top: 50%;margin-top: -50px;z-index: 9;text-align: center}
+    .main_wrap .section_paging .paging_txt{font-size: 12px;font-weight: 700;display: inline-block;transform: rotate(90deg)}
+    .main_wrap .section_paging .paging_txt.now{color: rgba(34,34,34,.6)}
+    .main_wrap .section_paging .paging_txt.total{color: #222)}
+    .main_wrap .section_paging .paging_box{width: 2px;height: 60px;background: rgba(45,45,45,.3);position: relative;margin: 2px auto}
+    .main_wrap .section_paging .paging_box .move_paging{position: absolute;width: 2px;height: 15px;background:  rgba(45,45,45,.8)}
+
+    /* set motion */
+    .main_wrap .wrap_inner .section .img_box .img_area .img_bg{position: absolute;width: 100%;height: 100%;background: #fff;}
+    .main_wrap .wrap_inner .section .img_box .img_area .img_bg.top{left: 0;top: 0}
+    .main_wrap .wrap_inner .section .img_box .img_area .img_bg.left{right: 0;top: 0}
+    .main_wrap .wrap_inner .section .img_box .img_area .img_bg.right{left: 0;top: 0}
+    .main_wrap .wrap_inner .section .sec_type1 .img_box .img_area .img_inner>a img{transform: translateY(900px) scale(1.05);opacity: 0;}
+    .main_wrap .wrap_inner .section .sec_type2 .img_box .img_area .img_inner>a img{transform: scale(1.05)}
+    .main_wrap .wrap_inner .section .sec_type3 .img_box .img_area .img_inner>a img{transform: scale(1.05)}
+
+    .main_wrap .wrap_inner .section .copy_box{transform: translateY(100px);opacity: 0}
+    .main_wrap .wrap_inner .section .copy_box .copy_area .copy_title span{transform: translateX(40px);opacity: 0;;display: inline-block;font-size: 42px;min-width: 10px}
+    .main_wrap .wrap_inner .section .copy_box .copy_area .copy_title span em{min-width: 10px;display: block}
+    .main_wrap .wrap_inner .section .copy_box .copy_area .copy_sub_txt{opacity: 0;}
+    .main_wrap .wrap_inner .section .copy_box .copy_area .btn_more{opacity: 0;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <script>
+    var VirtualScroll = (function(document) {
+
+        var vs = {};
+
+        var numListeners, listeners = [], initialized = false;
+
+        var touchStartX, touchStartY;
+
+        // [ These settings can be customized with the options() function below ]
+        // Mutiply the touch action by two making the scroll a bit faster than finger movement
+        var touchMult = 2;
+        // Firefox on Windows needs a boost, since scrolling is very slow
+        var firefoxMult = 15;
+        // How many pixels to move with each key press
+        var keyStep = 120;
+        // General multiplier for all mousehweel including FF
+        var mouseMult = 1;
+
+        var bodyTouchAction;
+
+        var hasWheelEvent = 'onwheel' in document;
+        var hasMouseWheelEvent = 'onmousewheel' in document;
+        var hasTouch = 'ontouchstart' in document;
+        var hasTouchWin = navigator.msMaxTouchPoints && navigator.msMaxTouchPoints > 1;
+        var hasPointer = !!window.navigator.msPointerEnabled;
+        var hasKeyDown = 'onkeydown' in document;
+
+        var isFirefox = navigator.userAgent.indexOf('Firefox') > -1;
+
+        var event = {
+            y: 0,
+            x: 0,
+            deltaX: 0,
+            deltaY: 0,
+            originalEvent: null
+        };
+
+        vs.on = function(f) {
+            if(!initialized) initListeners();
+            listeners.push(f);
+            numListeners = listeners.length;
+        }
+
+        vs.options = function(opt) {
+            keyStep = opt.keyStep || 120;
+            firefoxMult = opt.firefoxMult || 15;
+            touchMult = opt.touchMult || 2;
+            mouseMult = opt.mouseMult || 1;
+        }
+
+        vs.off = function(f) {
+            listeners.splice(f, 1);
+            numListeners = listeners.length;
+            if(numListeners <= 0) destroyListeners();
+        }
+
+        var notify = function(e) {
+            event.x += event.deltaX;
+            event.y += event.deltaY;
+            event.originalEvent = e;
+
+            for(var i = 0; i < numListeners; i++) {
+                listeners[i](event);
+            }
+        }
+
+        var onWheel = function(e) {
+            // In Chrome and in Firefox (at least the new one)
+            event.deltaX = e.wheelDeltaX || e.deltaX * -1;
+            event.deltaY = e.wheelDeltaY || e.deltaY * -1;
+
+            // for our purpose deltamode = 1 means user is on a wheel mouse, not touch pad
+            // real meaning: https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent#Delta_modes
+            if(isFirefox && e.deltaMode == 1) {
+                event.deltaX *= firefoxMult;
+                event.deltaY *= firefoxMult;
+            }
+
+            event.deltaX *= mouseMult;
+            event.deltaY *= mouseMult;
+
+            notify(e);
+        }
+
+        var onMouseWheel = function(e) {
+            // In Safari, IE and in Chrome if 'wheel' isn't defined
+            event.deltaX = (e.wheelDeltaX) ? e.wheelDeltaX : 0;
+            event.deltaY = (e.wheelDeltaY) ? e.wheelDeltaY : e.wheelDelta;
+
+            notify(e);
+        }
+
+        var onTouchStart = function(e) {
+            var t = (e.targetTouches) ? e.targetTouches[0] : e;
+            touchStartX = t.pageX;
+            touchStartY = t.pageY;
+        }
+
+        var onTouchMove = function(e) {
+            // e.preventDefault(); // < This needs to be managed externally
+            var t = (e.targetTouches) ? e.targetTouches[0] : e;
+
+            event.deltaX = (t.pageX - touchStartX) * touchMult;
+            event.deltaY = (t.pageY - touchStartY) * touchMult;
+
+            touchStartX = t.pageX;
+            touchStartY = t.pageY;
+
+            notify(e);
+        }
+
+        var onKeyDown = function(e) {
+            // 37 left arrow, 38 up arrow, 39 right arrow, 40 down arrow
+            event.deltaX = event.deltaY = 0;
+            switch(e.keyCode) {
+                case 37:
+                    event.deltaX = -keyStep;
+                    break;
+                case 39:
+                    event.deltaX = keyStep;
+                    break;
+                case 38:
+                    event.deltaY = keyStep;
+                    break;
+                case 40:
+                    event.deltaY = -keyStep;
+                    break;
+            }
+
+            notify(e);
+        }
+
+        var initListeners = function() {
+            if(hasWheelEvent) document.addEventListener("wheel", onWheel);
+            if(hasMouseWheelEvent) document.addEventListener("mousewheel", onMouseWheel);
+
+            if(hasTouch) {
+                document.addEventListener("touchstart", onTouchStart);
+                document.addEventListener("touchmove", onTouchMove);
+            }
+
+            if(hasPointer && hasTouchWin) {
+                bodyTouchAction = document.body.style.msTouchAction;
+                document.body.style.msTouchAction = "none";
+                document.addEventListener("MSPointerDown", onTouchStart, true);
+                document.addEventListener("MSPointerMove", onTouchMove, true);
+            }
+
+            if(hasKeyDown) document.addEventListener("keydown", onKeyDown);
+
+            initialized = true;
+        }
+
+        var destroyListeners = function() {
+            if(hasWheelEvent) document.removeEventListener("wheel", onWheel);
+            if(hasMouseWheelEvent) document.removeEventListener("mousewheel", onMouseWheel);
+
+            if(hasTouch) {
+                document.removeEventListener("touchstart", onTouchStart);
+                document.removeEventListener("touchmove", onTouchMove);
+            }
+
+            if(hasPointer && hasTouchWin) {
+                document.body.style.msTouchAction = bodyTouchAction;
+                document.removeEventListener("MSPointerDown", onTouchStart, true);
+                document.removeEventListener("MSPointerMove", onTouchMove, true);
+            }
+
+            if(hasKeyDown) document.removeEventListener("keydown", onKeyDown);
+
+            initialized = false;
+        }
+
+        return vs;
+    })(document);
+
+
+
+    var MAIN = (function(){
+        var $window = $(window),
+            sectionIdx = 0,
+            sectionPos = 0,
+            sectionPrvIdx = 0,
+            sectionFlag = true,
+            moveFlag = false;
+
+        function init(){
+            // titleIncision('sec_type1');
+            // titleIncision('sec_type2');
+            // titleIncision('sec_type3');
+            // titleIncision('sec_type4');
+
+            VirtualScroll.on(function(e) {
+                if(!sectionFlag){
+                    sectionFlag = true;
+                    if(e.deltaY >= 0 ){
+                        sectionIdx -= 1;
+                        if(sectionIdx < 0){
+                            sectionIdx = 0;
+                            sectionFlag = false;
+                            //return false;
+                        }else{
+                            scrollInMot(sectionIdx)
+                        }
+                    }else{
+                        sectionIdx += 1;
+                        if(sectionIdx > 3){
+                            sectionIdx = 3;
+                            sectionFlag = false;
+                            //return false;
+                        }else{
+                            scrollInMot(sectionIdx)
+                        }
+                    }
+                    sectionPos = sectionIdx;
+                    TweenMax.to($(".wrap_inner"), 1, {y:-sectionIdx * ($window.height()/*-65*/),ease:Power2.easeOut});
+
+                    $('.main_wrap .section_paging .now').html(sectionIdx+1);
+                    TweenMax.to($('.main_wrap .section_paging .move_paging'),0.5,{y:15*sectionIdx});
+                }
+            });
+            $window.resize(function(){
+                TweenMax.to(".wrap_inner", 0, {y:-sectionIdx * ($window.height()/*-65*/)});
+            });
+            mainTopMotion();
+        }
+
+        function mainTopMotion(){
+            TweenMax.to($('#header .navi'),1,{top:0,ease: Power3.easeInOut});
+            TweenMax.to($('.sec_type1 .img_box .img_area .img_inner>a img'),2,{opacity:1,y:0,ease: Power3.easeInOut});
+            TweenMax.to($('.sec_type1 .img_box .img_area .img_inner>a img'),2,{scale:1,delay:1,ease: Power0.easeNone});
+            TweenMax.to($('.sec_type1 .img_box .img_area .img_bg.top'),1.5,{yPercent:-100,ease: Power3.easeInOut});
+            TweenMax.to($('.sec_type1 .img_box .img_area .img_bg.left'),2.2,{width:0,ease: Power3.easeInOut});
+            TweenMax.to($('.sec_type1 .copy_box'),1,{y:0,opacity:1,delay:1,ease: Power3.easeOut});
+            TweenMax.delayedCall(1.5, function(){
+                for(var i = 0,len = $('.sec_type1 .copy_box .copy_area .copy_title span').length;i<len;i++){
+                    TweenMax.to($('.sec_type1 .copy_box .copy_area .copy_title span').eq(i),0.8,{x:0,opacity:1,fontSize:'40px',delay:0.08*(i+1),ease: Power3.easeOut});
+                }
+            });
+            TweenMax.to($('.sec_type1 .copy_area .copy_sub_txt'),1,{opacity:1,delay:2,ease: Power3.easeInOut,onStart : function(){
+                sectionFlag = false;
+            }});
+            TweenMax.to($('.sec_type1 .copy_area .btn_more'),1,{opacity:1,delay:2.2,ease: Power3.easeInOut});
+        }
+
+        function scrollInMot(idx){
+            switch (idx) {
+                case 0 :
+                    //sectionFlag = false;
+                    TweenMax.set($('.sec_type1 .img_box .img_area .img_inner>a img'),{scale:1.05,opacity:0,y:900});
+                    TweenMax.set($('.sec_type1 .img_box .img_area .img_bg.top'),{yPercent:0});
+                    TweenMax.set($('.sec_type1 .img_box .img_area .img_bg.left'),{width:'100%'});
+                    TweenMax.set($('.sec_type1 .copy_box'),{y:100,opacity:0});
+                    TweenMax.set($('.sec_type1 .copy_box .copy_area .copy_title span'),{x:30,fontSize:'42px',opacity:0});
+                    TweenMax.set($('.sec_type1 .copy_area .copy_sub_txt'),{opacity:0});
+                    TweenMax.set($('.sec_type1 .copy_area .btn_more'),{opacity:0});
+
+                    TweenMax.to($('.sec_type1 .img_box .img_area .img_inner>a img'),2,{opacity:1,y:0,ease: Power3.easeInOut});
+                    TweenMax.to($('.sec_type1 .img_box .img_area .img_inner>a img'),2,{scale:1,delay:1,ease: Power0.easeNone});
+                    TweenMax.to($('.sec_type1 .img_box .img_area .img_bg.top'),1.5,{yPercent:-100,ease: Power3.easeInOut});
+                    TweenMax.to($('.sec_type1 .img_box .img_area .img_bg.left'),2.2,{width:0,ease: Power3.easeInOut});
+                    TweenMax.to($('.sec_type1 .copy_box'),1,{y:0,opacity:1,delay:1,ease: Power3.easeOut});
+                    TweenMax.delayedCall(1.5, function(){
+                        for(var i = 0,len = $('.sec_type1 .copy_box .copy_area .copy_title span').length;i<len;i++){
+                            TweenMax.to($('.sec_type1 .copy_box .copy_area .copy_title span').eq(i),0.8,{x:0,opacity:1,fontSize:'40px',delay:0.08*(i+1),ease: Power3.easeOut});
+                        }
+                    });
+                    TweenMax.to($('.sec_type1 .copy_area .copy_sub_txt'),1,{opacity:1,delay:2,ease: Power3.easeInOut,onStart : function(){
+                        sectionFlag = false;
+                    }});
+                    TweenMax.to($('.sec_type1 .copy_area .btn_more'),1,{opacity:1,delay:2.2,ease: Power3.easeInOut});
+                    break;
+                case 1 :
+                    //TweenMax.set($('.sec_type2 .img_box .img_area .img_inner img'),{opacity:0,y:900});
+                    TweenMax.set($('.sec_type2 .img_box .img_area .img_bg.right'),{width:'100%'});
+                    TweenMax.set($('.sec_type2 .img_box .img_area .img_inner>a img'),{scale:1.05});
+                    TweenMax.set($('.sec_type2 .copy_box'),{y:100,opacity:0});
+                    TweenMax.set($('.sec_type2 .copy_box .copy_area .copy_title span'),{x:30,fontSize:'42px',opacity:0});
+                    TweenMax.set($('.sec_type2 .copy_area .copy_sub_txt'),{opacity:0});
+                    TweenMax.set($('.sec_type2 .copy_area .btn_more'),{opacity:0});
+                    //TweenMax.to($('.sec_type2 .img_box .img_area .img_inner img'),1.6,{opacity:1,y:0,ease: Power3.easeInOut});
+                    TweenMax.to($('.sec_type2 .img_box .img_area .img_bg.right'),1.3,{width:0,ease: Power3.easeInOut});
+                    TweenMax.to($('.sec_type2 .img_box .img_area .img_inner>a img'),2,{scale:1,delay:0.3,ease: Power0.easeNone});
+                    TweenMax.to($('.sec_type2 .copy_box'),1,{y:0,opacity:1,delay:0.5,ease: Power3.easeOut});
+                    TweenMax.delayedCall(1, function(){
+                        for(var i = 0,len = $('.sec_type2 .copy_box .copy_area .copy_title span').length;i<len;i++){
+                            TweenMax.to($('.sec_type2 .copy_box .copy_area .copy_title span').eq(i),0.8,{x:0,opacity:1,fontSize:'40px',delay:0.05*(i+1),ease: Power3.easeOut});
+                        }
+                    });
+                    TweenMax.to($('.sec_type2 .copy_area .copy_sub_txt'),1,{opacity:1,delay:1.5,ease: Power3.easeInOut,onStart : function(){
+                        sectionFlag = false;
+                    }});
+                    TweenMax.to($('.sec_type2 .copy_area .btn_more'),1,{opacity:1,delay:1.8,ease: Power3.easeInOut});
+                    break;
+                case 2 :
+                    //TweenMax.set($('.sec_type2 .img_box .img_area .img_inner img'),{opacity:0,y:900});
+                    TweenMax.set($('.sec_type3 .img_box .img_area .img_bg.left'),{width:'100%'});
+                    TweenMax.set($('.sec_type3 .img_box .img_area .img_inner>a img'),{scale:1.05});
+                    TweenMax.set($('.sec_type3 .copy_box'),{y:100,opacity:0});
+                    TweenMax.set($('.sec_type3 .copy_box .copy_area .copy_title span'),{x:30,fontSize:'42px',opacity:0});
+                    TweenMax.set($('.sec_type3 .copy_area .copy_sub_txt'),{opacity:0});
+                    TweenMax.set($('.sec_type3 .copy_area .btn_more'),{opacity:0});
+                    //TweenMax.to($('.sec_type2 .img_box .img_area .img_inner img'),1.6,{opacity:1,y:0,ease: Power3.easeInOut});
+                    TweenMax.to($('.sec_type3 .img_box .img_area .img_bg.left'),1.4,{width:0,ease: Power3.easeInOut});
+                    TweenMax.to($('.sec_type3 .img_box .img_area .img_inner>a img'),2,{scale:1,delay:0.4,ease: Power0.easeNone});
+                    TweenMax.to($('.sec_type3 .copy_box'),1,{y:0,opacity:1,delay:0.5,ease: Power3.easeOut});
+                    TweenMax.delayedCall(1, function(){
+                        for(var i = 0,len = $('.sec_type3 .copy_box .copy_area .copy_title span').length;i<len;i++){
+                            TweenMax.to($('.sec_type3 .copy_box .copy_area .copy_title span').eq(i),0.8,{x:0,opacity:1,fontSize:'40px',delay:0.05*(i+1),ease: Power3.easeOut});
+                        }
+                        TweenMax.set($('.sec_type4 .img_box .img_area .img_bg.right'),{width:'100%'});
+                        TweenMax.set($('.sec_type4 .img_box .img_area .img_inner> img'),{scale:1.05});
+                        TweenMax.set($('.sec_type4 .copy_box'),{y:100,opacity:0});
+                        TweenMax.set($('.sec_type4 .copy_box .copy_area .copy_title span'),{x:30,fontSize:'42px',opacity:0});
+                        TweenMax.set($('.sec_type4 .copy_area .copy_sub_txt'),{opacity:0});
+                        TweenMax.set($('.sec_type4 .copy_area .btn_more'),{opacity:0});
+                    });
+                    TweenMax.to($('.sec_type3 .copy_area .copy_sub_txt'),1,{opacity:1,delay:1.5,ease: Power3.easeInOut,onStart : function(){
+                        sectionFlag = false;
+                    }});
+                    TweenMax.to($('.sec_type3 .copy_area .btn_more'),1,{opacity:1,delay:1.8,ease: Power3.easeInOut});
+                    break;
+                case 3 :
+                    //TweenMax.to($('.sec_type2 .img_box .img_area .img_inner img'),1.6,{opacity:1,y:0,ease: Power3.easeInOut});
+                    TweenMax.to($('.sec_type4 .img_box .img_area .img_bg.right'),1.4,{width:0,ease: Power3.easeInOut});
+                    TweenMax.to($('.sec_type4 .img_box .img_area .img_inner>a img'),2,{scale:1,delay:0.4,ease: Power0.easeNone});
+                    TweenMax.to($('.sec_type4 .copy_box'),1,{y:0,opacity:1,delay:0.5,ease: Power3.easeOut});
+                    TweenMax.delayedCall(1, function(){
+                        for(var i = 0,len = $('.sec_type4 .copy_box .copy_area .copy_title span').length;i<len;i++){
+                            TweenMax.to($('.sec_type4 .copy_box .copy_area .copy_title span').eq(i),0.8,{x:0,opacity:1,fontSize:'40px',delay:0.05*(i+1),ease: Power3.easeOut});
+                        }
+                    });
+                    TweenMax.to($('.sec_type4 .copy_area .copy_sub_txt'),1,{opacity:1,delay:1.5,ease: Power3.easeInOut,onStart : function(){
+                        sectionFlag = false;
+                    }});
+                    TweenMax.to($('.sec_type4 .copy_area .btn_more'),1,{opacity:1,delay:1.8,ease: Power3.easeInOut});
+                    break;
+            }
+            sectionPrvIdx = idx;
+        }
+        return{
+            init : init
+        }
+    })();
+
+    $(function(){
+        MAIN.init()
+    }());
+  </script>
+</head>
+<body>
+<div id="wrap" class="main_wrap">
+	<div class="wrap_inner">
+		<div class="section">
+			<div class="sec_inner sec_type1">
+				<div class="img_box left">
+					<div class="img_area">
+						<div class="img_inner main_img_link">
+							<a href="#none">
+								<img src="http://via.placeholder.com/1000x700.png/09f/fff?text=section1">
+							</a>
+							<div class="btn_cursor" >
+								<div class="btn_view_more"><img src="../_resource/_web/images/main/pointer_cursor.png" alt=""></div>
+							</div>
+						</div>
+						<div class="img_bg top"></div>
+						<div class="img_bg left"></div>
+					</div>
+				</div>
+				<div class="copy_box right">
+					<div class="copy_num enMP">01</div>
+					<div class="copy_area">
+						<div class="copy_title">SECTION1<br>еяуидем инсоленс</div>
+						<div class="copy_sub_txt">संस्था क्षमता विस्तरणक्षमता बारे देखने</div>
+						<div class="btn_more"><a href="https://www.lifeplus.co.kr/lifemeetslife" class="g_btn_view_more">VIEW MORE</a></div>
+					</div>
+				</div> 
+			</div>
+		</div>
+		<div class="section ">
+			<div class="sec_inner sec_type2">
+				<div class="img_box right">
+					<div class="img_area">
+						<div class="img_inner main_img_link">
+							<a href="#none">
+								<img src="http://via.placeholder.com/1000x700.png/09f/fff?text=section2">
+							</a>
+							<div class="btn_cursor" >
+								<div class="btn_view_more"><img src="../_resource/_web/images/main/pointer_cursor.png" alt=""></div>
+							</div>
+						</div>
+						<div class="img_bg right"></div>
+					</div>
+				</div>
+				<div class="copy_box left">
+					<div class="copy_num enMP">02</div>
+					<div class="copy_area">
+						<div class="copy_title">SECTION2<br>еяуидем инсоленс</div>
+						<div class="copy_sub_txt">संस्था क्षमता विस्तरणक्षमता बारे देखने</div>
+						<div class="btn_more"><a href="https://www.lifeplus.co.kr/mypinkblossom" class="g_btn_view_more">VIEW MORE</a></div>
+					</div>
+				</div> 
+			</div>
+		</div>
+		<div class="section ">
+			<div class="sec_inner sec_type3">
+				<div class="img_box left">
+					<div class="img_area">
+						<div class="img_inner main_img_link">
+							<a href="#none">
+								<img src="http://via.placeholder.com/1000x700.png/09f/fff?text=section3">
+							</a>
+							<div class="btn_cursor" >
+								<div class="btn_view_more"><img src="../_resource/_web/images/main/pointer_cursor.png" alt=""></div>
+							</div>
+						</div>
+						<div class="img_bg left"></div>
+					</div>
+				</div>
+				<div class="copy_box right">
+					<div class="copy_num enMP">03</div>
+					<div class="copy_area">
+						<div class="copy_title">SECTION3<br>еяуидем инсоленс</div>
+						<div class="copy_sub_txt">संस्था क्षमता विस्तरणक्षमता बारे देखने</div>
+						<div class="btn_more"><a href="https://www.lifeplus.co.kr/ambassador" class="g_btn_view_more">VIEW MORE</a></div>
+					</div>
+				</div> 
+			</div>
+		</div>
+		<div class="section ">
+			<div class="sec_inner sec_type4">
+				<div class="img_box right">
+					<div class="img_area">
+						<div class="img_inner main_img_link">
+							<a href="#none">
+								<img src="http://via.placeholder.com/1000x700.png/09f/fff?text=section4">
+							</a>
+							<div class="btn_cursor" >
+								<div class="btn_view_more"><img src="../_resource/_web/images/main/pointer_cursor.png" alt=""></div>
+							</div>
+						</div>
+						<div class="img_bg right"></div>
+					</div>
+				</div>
+				<div class="copy_box left">
+					<div class="copy_num enMP">04</div>
+					<div class="copy_area">
+						<div class="copy_title">SECTION4<br>еяуидем инсоленс</div>
+						<div class="copy_sub_txt">संस्था क्षमता विस्तरणक्षमता बारे देखने</div>
+						<div class="btn_more"><a href="https://www.lifeplus.co.kr/lifemeetslife" class="g_btn_view_more">VIEW MORE</a></div>
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+	<div class="section_paging left">
+		<div class="paging_txt now">1</div>
+		<div class="paging_box">
+			<div class="move_paging"></div>
+		</div>
+		<div class="paging_txt total">4</div>
+	</div> 
+</div>
+</body>
+</html>
