@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* ================================== halloweenZone ================================== */
+#halloweenZone {
+	.zoneInfoWrap {
+		width: 904px;
+		margin: 0 auto;
+		padding-top: 90px;
+		background: url('../img/local_map.png') no-repeat right bottom;
+	}
+	.zoneInfo {
+		margin-top: 21px;
+		&:first-child {
+			margin-top: 0;
+		}
+		.ulTitle {
+			position: relative;
+			padding-left: 20px;
+			font-size: 18px;
+			letter-spacing: -0.05em;
+			&:before {
+				content: '';
+				@include posAbsoluteLT(0, 50%, 11px, 11px);
+				@include translate(0, -50%);
+				border-width: 1px;
+				border-style: solid;
+				border-radius: 50%;
+			}
+		}
+		ul {
+			margin-top: 7px;
+			li {
+				padding-top: 1px;
+				font-size: 18px;
+				letter-spacing: -0.05em;
+				color: #cacaca;
+			}
+		}
+		&.newContent {
+			.ulTitle {
+				color: #ff8888;
+				&:before {
+					border-color: #b70000;
+					background: #8e0000;
+				}
+			}
+		}
+		&.attraction {
+			.ulTitle {
+				color: #ffde97;
+				&:before {
+					border-color: #9d0b0f;
+					background: #6b0505;
+				}
+			}
+		}
+		&.entertainment {
+			.ulTitle {
+				color: #43ccff;
+				&:before {
+					border-color: #0c2cbe;
+					background: #1f0a9d;
+				}
+			}
+			ul {
+				li {
+					padding-top: 11px;
+					&:first-child {
+						padding-top: 1px;
+					}
+					span {
+						display: block;
+						font-size: 16px;
+						line-height: 1.4;
+						color: #95a3a9;
+
+					}
+				}
+			}
+		}
+	}
+	.zonePhotoWrap {
+		position: absolute;
+		left: 50%;
+		width: 904px;
+		margin-top: 81px;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		z-index: 9;
+		@include clearfix;
+		.zonePhoto {
+			float: left;
+			width: 231px;
+			&:last-child,
+			&+.zonePhoto+.zonePhoto+.zonePhoto {
+				width: 211px;
+			}
+		}
+		.photoThumb {
+			position: relative;
+			.thumbCover {
+				@include posAbsoluteLT(0, 0, 211px, 145px);
+				z-index: 1;
+			}
+		}
+		.descList {
+			dd {
+				min-height: 150px;
+				line-height: 1.45;
+			}
+		}
+		button {
+			margin-top: 7px;
+		}
+	}
+
+}
