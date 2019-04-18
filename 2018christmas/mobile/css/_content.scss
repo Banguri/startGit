@@ -1,0 +1,253 @@
+@charset "utf-8";
+/* ================================== content ================================== */
+
+#mainScene {
+	background: url('../img/content_main.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+}
+#goldZoneScene {
+	background: url('../img/content_photospot1.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	.btnView {
+		top: get-per-h(328px);
+		right: get-per-w(52px);
+	}
+}
+#santaHouseScene {
+	background: url('../img/content_photospot2.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	.btnView {
+		top: get-per-h(339px);
+		right: get-per-w(94px);
+	}
+}
+#towerTreeScene {
+	background: url('../img/content_photospot3.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	.btnView {
+		top: get-per-h(354px);
+		right: get-per-w(83px);
+	}
+}
+#starlightZooScene {
+	background: url('../img/content_photospot4.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	.btnView {
+		top: get-per-h(330px);
+		right: get-per-w(97px);
+	}
+}
+#goldUmbrellaScene {
+	background: url('../img/content_photospot5.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	.btnView {
+		top: get-per-h(676px);
+		right: get-per-w(92px);
+	}
+}
+#fireworksScene {
+	background: url('../img/content_fireworks.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	.btnQuick {
+		top: get-per-h(883px);
+		right: get-per-w(165px);
+	}
+	.btnView {
+		top: get-per-h(328px);
+		right: get-per-w(138px);
+	}
+}
+#xmasParadeScene {
+	background: url('../img/content_performance1.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	.btnQuick {
+		top: get-per-h(832px);
+		right: get-per-w(161px);
+	}
+	.btnView {
+		top: get-per-h(328px);
+		right: get-per-w(93px);
+	}
+}
+#xmasWishScene {
+	background: url('../img/content_performance2.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	.btnQuick {
+		top: get-per-h(832px);
+		right: get-per-w(124px);
+	}
+	.btnView {
+		top: get-per-h(328px);
+		right: get-per-w(93px);
+	}
+}
+#gardenPartyScene {
+	background: url('../img/content_performance3.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	.btnQuick {
+		top: get-per-h(860px);
+		right: get-per-w(124px);
+	}
+	.btnView {
+		top: get-per-h(328px);
+		right: get-per-w(110px);
+	}
+}
+#mdScene {
+	background: url('../img/content_md.jpg') no-repeat 50% 50%;
+	background-size: 100% 100%;
+	.btnQuick {
+		top: get-per-h(799px);
+		right: get-per-w(129px);
+	}
+	.btnView {
+		top: get-per-h(328px);
+		right: get-per-w(110px);
+	}
+	.productBtn {
+		position: absolute;
+		top: get-per-h(516px);
+		left: 50%;
+		display: inline-block;
+		width: get-per-w(412px);
+		height: get-per-h(109px);
+		@include translate(-50%, 0);
+		background: url('../img/btn_shop_link.png') no-repeat center center;
+		background-size: 100% 100%;
+	}
+	.productSlideWrap {
+		position: absolute;
+		top: get-per-h(640px);
+		left: 50%;
+		display: block;
+		width: 100%;
+		max-height: get-per-h(585px);
+		@include translate(-50%, 0);
+		.slideItem {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				display: block;
+				width: 88%;
+				height: 89%;
+				@include translate(-50%, -50%);
+				background-color: #000;
+				opacity: 0.5;
+			}
+			&.slick-center {
+				&:before {
+					opacity: 0;
+					transition: all 300ms ease;
+				}
+			}
+		}
+	}
+}
+
+/**** slick-theme custom ****/
+/** Arrows **/
+.slick-prev,
+.slick-next {
+	font-size: 0;
+	line-height: 0;
+	@include posAbsoluteLT(50%, 50%, 15.92%, 20.68%);
+	padding: 0;
+	@include translate(-50%, -50%);
+	cursor: pointer;
+	color: transparent;
+	border: none;
+	outline: none;
+	background: transparent;
+	z-index: 9;
+}
+.slick-disabled {
+	opacity: 0;
+}
+/* productSlide custom */
+.productSlide .slick-prev {
+	margin-left: -41.67%;
+	background: url(../img/product_slick_prev.png) no-repeat 50% 50%;
+	background-size: cover;
+}
+.productSlide .slick-next {
+	margin-left: 41.67%;
+	background: url(../img/product_slick_next.png) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+/** Dot **/
+.slick-dots {
+	position: absolute;
+	left: 50%;
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	@include translate(-50%, 0);
+	z-index: 9;
+	li {
+		position: relative;
+		display: inline-block;
+		padding: 0;
+		cursor: pointer;
+		button {
+			position: relative;
+			display: block;
+			cursor: pointer;
+			color: transparent;
+			font-size: 0;
+			line-height: 0;
+			border: 0;
+			outline: none;
+			&:hover,
+			&:focus {
+				outline: none;
+				&:before {
+					opacity: 1;
+				}
+			}
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				content: '';
+				text-align: center;
+				border-radius: 0;
+				@include translate(-50%, -50%);
+			}
+		}
+	}
+}
+/* photoSlide custom */
+.photoSlide {
+	.slick-dots {
+		bottom: -48px;
+		li {
+			button {
+				width: 31px;
+				height: 31px;
+				margin: 0;
+				background: transparent;
+				&:before {
+					width: 11px;
+					height: 11px;
+					background: url('../img/photo_slick_dots.png') no-repeat 50% 50%;
+					background-size: cover;
+					box-sizing: border-box;
+				}
+			}
+			&.slick-active {
+				button {
+					&:before {
+						background: url('../img/photo_slick_dots_active.png') no-repeat 50% 50%;
+						background-size: cover;
+					}
+				}
+			}
+		}
+	}
+}

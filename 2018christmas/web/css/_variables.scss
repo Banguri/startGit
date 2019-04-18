@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+// Font
+$fontFamily: "Noto Sans KR", "Malgun Gothic", Dotum, sans-serif;
+$fontFamilyNotoSerif: 'Noto Serif KR', sans-serif;
+$fontFamilyNanumSquare: NanumSquare, "Malgun Gothic", Dotum, sans-serif;
+
+// GNB
+$menu1Width: 86px;
+$menu2Width: 198px;
+$menu3Width: 170px;
+$menu4Width: 232px;
+$menu5Width: 140px;
+$menuTotalWidth: $menu1Width+$menu2Width+$menu3Width+$menu4Width+$menu5Width;
+
+// fp-controlArrow
+$fpTextZoneWidth: 92px;
+$fpTextHouseWidth: 94px;
+$fpTextTreeWidth: 64px;
+$fpTextZooWidth: 80px;
+$fpTextUmbrellaWidth: 80px;
+$fpTextParadeWidth: 116px;
+$fpTextWishWidth: 110px;
+$fpTextPartyWidth: 67px;
+
+// product list
+$itemWidth: 238px;
+$itemNumber: 3;
+$itemGap: 50px;
+$itemTotalWidth: ($itemWidth*$itemNumber) + ($itemGap*($itemNumber - 1));
+
+//infoWrap
+$photospot1InfoWidth: 370px;
+$photospot2InfoWidth: 370px;
+$photospot3InfoWidth: 370px;
+$photospot4InfoWidth: 355px;
+$photospot5InfoWidth: 140px;
+$fireworksInfoWidth: 370px;
+$performance1InfoWidth: 370px;
+$performance2InfoWidth: 300px;
+$performance3InfoWidth: 315px;
+
+$photospot1InfoLine: #413525;
+$photospot2InfoLine: #52371d;
+$photospot3InfoLine: #443827;
+$photospot4InfoLine: #2d4382;
+$photospot5InfoLine: #443827;
+$fireworksInfoLine: #342517;
+$performance1InfoLine: #8a4f02;
+$performance2InfoLine: #342517;
+$performance3InfoLine: #351704;
+
+$photospot1InfoNumBg: #2b3017;
+$photospot2InfoNumBg: #341c0b;
+$photospot3InfoNumBg: #431028;
+$photospot4InfoNumBg: #020f21;
+$photospot5InfoNumBg: #1a0d07;
+$fireworksInfoNumBg: #5b1259;
+$performance1InfoNumBg: #853415;
+$performance2InfoNumBg: #511010;
+$performance3InfoNumBg: #250a04;

@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* ================================== performance ================================== */
+#performanceWrap {
+
+	// 블링블링 X-MAS 퍼레이드
+	.performance1Content {
+		margin-left: 200px;
+		.infoWrap {
+			ul {
+				width: $performance1InfoWidth;
+				li {
+					span {
+						&:after {
+							background-color: $performance1InfoLine;
+						}
+					}
+					i {
+						background-color: $performance1InfoNumBg;
+					}
+				}
+			}
+		}
+		.btnView {
+			top: 300px;
+			right: 70px;
+		}
+	}
+	.performance1Light {
+		top: 50%;
+		left: 50%;
+		width: 130%;
+		height: 130%;
+		background: url('../img/performance1_light.png') no-repeat center center;
+		background-size: cover;
+	}
+	.performance1Objet1 {
+		top: 50%;
+		left: 50%;
+		width: 120%;
+		height: 120%;
+		background: url('../img/performance1_objet1.png') no-repeat center center;
+		background-size: cover;
+	}
+	.performance1Objet2 {
+		top: 50%;
+		left: 50%;
+		width: 365px;
+		height: 230px;
+		margin-top: -230px;
+		margin-left: -617px;
+		background: url('../img/performance1_objet2.png') no-repeat center center;
+		background-size: cover;
+	}
+	.performance1Bg {
+		top: 50%;
+		left: 50%;
+		width: 110%;
+		height: 110%;
+		background: url('../img/performance1_bg.jpg') no-repeat center center;
+		background-size: cover;
+	}
+
+	// 우당탕! 산타마을 대소동
+	.performance2Content {
+		margin-left: -285px;
+		.infoWrap {
+			ul {
+				width: $performance2InfoWidth;
+				li {
+					span {
+						&:after {
+							background-color: $performance2InfoLine;
+						}
+					}
+					i {
+						background-color: $performance2InfoNumBg;
+					}
+				}
+			}
+		}
+		.btnView {
+			top: 275px;
+			right: 35px;
+		}
+	}
+	.performance2Light {
+		top: 50%;
+		left: 50%;
+		width: 130%;
+		height: 130%;
+		background: url('../img/performance2_light.png') no-repeat center center;
+		background-size: cover;
+	}
+	.performance2Objet1 {
+		top: 50%;
+		left: 50%;
+		width: 800px;
+		height: 900px;
+		margin-top: -60px;
+		margin-left: 248px;
+		background: url('../img/performance2_objet1.png') no-repeat center center;
+		background-size: cover;
+	}
+	.performance2Edge {
+		top: 50%;
+		left: 50%;
+		width: 120%;
+		height: 120%;
+		background: url('../img/performance2_edge.png') no-repeat center center;
+		background-size: cover;
+	}
+	.performance2Bg {
+		top: 50%;
+		left: 50%;
+		width: 110%;
+		height: 110%;
+		background: url('../img/performance2_bg.jpg') no-repeat center center;
+		background-size: cover;
+	}
+
+	// 블링블링 위시 타임
+	.performance3Content {
+		margin-left: 260px;
+		.infoWrap {
+			ul {
+				width: $performance3InfoWidth;
+				li {
+					span {
+						&:after {
+							background-color: $performance1InfoLine;
+						}
+					}
+					i {
+						background-color: $performance1InfoNumBg;
+					}
+				}
+			}
+		}
+		.btnView {
+			top: 281px;
+			right: -11px;
+		}
+	}
+	.performance3Light {
+		top: 50%;
+		left: 50%;
+		width: 130%;
+		height: 130%;
+		background: url('../img/performance3_light.png') no-repeat center center;
+		background-size: cover;
+	}
+	.performance3Objet1 {
+		top: auto;
+		left: 50%;
+		bottom: -37px;
+		width: 1180px;
+		height: 760px;
+		@include translate(-50%, 0);
+		margin-left: -216px;
+		background: url('../img/performance3_objet1.png') no-repeat center center;
+		background-size: cover;
+	}
+	.performance3Bg {
+		top: 50%;
+		left: 50%;
+		width: 110%;
+		height: 110%;
+		background: url('../img/performance3_bg.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	
+}
+
+
+
+@media screen and (min-width:1600px) {
+	#performanceWrap {
+		.performance1Objet2 {
+			left: 0;
+			margin-left: -60px;
+			@include translate(0, -50%);
+		}
+	}
+}

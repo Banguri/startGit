@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@function get-vw($object) {
+	$vw: (760 * 0.01) * 1px;
+	@return ($object / $vw) * 1vw;
+}
+
+@function get-per-w($object) {
+	@return ($object / $viewportWidth) * 100%;
+}
+@function get-per-h($object) {
+	@return ($object / $viewportHeight) * 100%;
+}

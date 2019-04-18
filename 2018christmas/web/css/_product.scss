@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* ================================== product ================================== */
+#productWrap {
+
+	.productContent {
+		.btnView {
+			top: 300px;
+			right: -5px;
+		}
+	}
+	.productList {
+		margin-top: 24px;
+		@include clearfix;
+		width: $itemTotalWidth;
+		li {
+			float: left;
+			width: $itemWidth;
+			margin-left: 50px;
+			&:first-child {
+				margin-left: 0;
+			}
+			&.item1 {
+				padding-top: 34px;
+				img {
+					margin: 0 -8px -11px -80px;
+				}
+			}
+			&.item2 {
+				img {
+					margin: -16px 0 -22px -76px;
+				}
+			}
+			&.item3 {
+				padding-top: 34px;
+				img {
+					margin: -13px -13px 0 -32px;
+				}
+			}
+		}
+	}
+	.productLight {
+		top: 50%;
+		left: 50%;
+		width: 130%;
+		height: 130%;
+		background: url('../img/product_light.png') no-repeat center center;
+		background-size: cover;
+	}
+	.productEdge {
+		top: 50%;
+		left: 50%;
+		width: 120%;
+		height: 120%;
+		background: url('../img/product_edge.png') no-repeat center center;
+		background-size: cover;
+	}
+	.productBg {
+		top: 50%;
+		left: 50%;
+		width: 110%;
+		height: 110%;
+		background: url('../img/product_bg.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	.productBtn {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: 320px;
+		padding-top: 190px;
+		@include translate(-50%, 0);
+		background: url('../img/btn_shop_line.png') no-repeat center top;
+		a {
+			display: block;
+			width: 131px;
+			height: 151px;
+			background: url('../img/btn_shop_link.png') no-repeat center center;
+		}
+	}
+
+}

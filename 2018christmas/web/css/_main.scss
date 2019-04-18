@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* ================================== main ================================== */
+#mainWrap {
+
+	.mainTitle {
+		top: 50%;
+		left: 50%;
+		width: 520px;
+		height: 510px;
+		margin-top: -135px;
+		background: url('../img/main_title.png') no-repeat center center;
+		background-size: cover;
+	}
+	.mainScroll {
+		top: 50%;
+		left: 50%;
+		width: 70px;
+		height: 70px;
+		margin-top: 155px;
+		background: url('../img/main_scroll.png') no-repeat center center;
+		background-size: cover;
+	}
+	.mainLight {
+		top: 50%;
+		left: 50%;
+		width: 130%;
+		height: 130%;
+		background: url('../img/main_light.png') no-repeat center center;
+		background-size: cover;
+	}
+	.mainEdge {
+		top: 50%;
+		left: 50%;
+		width: 120%;
+		height: 120%;
+		background: url('../img/main_edge.png') no-repeat center center;
+		background-size: cover;
+	}
+	.mainBg {
+		top: 50%;
+		left: 50%;
+		width: 110%;
+		height: 110%;
+		background: url('../img/main_bg.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	
+}
