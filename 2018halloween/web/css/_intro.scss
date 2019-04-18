@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* ================================== intro ================================== */
+.introTitleWrap {
+	@include posAbsoluteLT(50%, -100px, 780px, 470px);
+	margin-left: -170px;
+	@include translate(-50%, 0);
+	background: url('../img/intro_title.png') no-repeat center center;
+	z-index: 10;
+	opacity: 0;
+	.titleSpark {
+		@include posAbsoluteLT(0, 0, 780px, 470px);
+		background: url('../img/intro_title_spark.png') no-repeat center center;
+		opacity: 0;
+		z-index: 12;
+	}
+	.titleA {
+		@include posAbsoluteLT(180px, 300px, 110px, 100px);
+		background: url('../img/intro_title_a.png') no-repeat center center;
+		opacity: 0;
+		z-index: 11;
+	}
+	.titleG {
+		@include posAbsoluteLT(490px, 275px, 110px, 100px);
+		background: url('../img/intro_title_g.png') no-repeat center center;
+		opacity: 0;
+		z-index: 11;
+	}
+}
+.introText {
+	@include posAbsoluteLT(50%, 510px, 615px, 65px);
+	margin-top: -5px;
+	margin-left: -180px;
+	@include translate(-50%, 0);
+	background: url('../img/intro_text.png') no-repeat center center;
+	z-index: 10;
+	opacity: 0;
+}
+.introBtn {	@include posAbsoluteLT(50%, 615px, 129px, 60px);
+	margin-top: -5px;
+	margin-left: -425px;
+	@include translate(-50%, 0);
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.introDim {
+	@include posFixedFull;
+	background: url('../img/intro_dim.png') no-repeat center center;
+	background-size: cover;
+	z-index: 4;
+}
+.introPoliceLine {
+	@include posFixedFull;
+	background: url('../img/intro_police_line.png') no-repeat center center;
+	background-size: cover;
+	z-index: 3;
+	opacity: 0;
+}
+.introBgLeft {
+	@include posFixedFull;
+	background: url('../img/intro_left.png') no-repeat center center;
+	background-size: cover;
+	z-index: 2;
+	opacity: 0;
+}
+.introBgRight {
+	@include posFixedFull;
+	background: url('../img/intro_right.png') no-repeat center center;
+	background-size: cover;
+	z-index: 1;
+	opacity: 0;
+}
+.introBg {
+	@include posFixedFull;
+	background: url('../img/bg_intro.jpg') no-repeat center center;
+	background-size: cover;
+	opacity: 0;
+}
+#sparkWrap {
+	&.intro {
+		z-index: 5;
+	}
+}

@@ -1,0 +1,1943 @@
+/**
+ * Filename : halloween2018.css
+ * Description : 2018 Halloween Festival ( Blood City 2 : Zombie Carnival ) web styles
+ **/
+/* ================================== base ================================== */
+/* font */
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+/* base */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, main, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  background: transparent;
+  font-size: 100%; }
+
+body {
+  color: #333;
+  font-family: "Noto Sans KR", "Malgun Gothic", Dotum, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: -0.05em; }
+
+ul, ol {
+  list-style-type: none; }
+
+img {
+  vertical-align: top; }
+
+a {
+  box-sizing: border-box;
+  color: #333;
+  text-decoration: none; }
+  a:hover, a:active {
+    text-decoration: none; }
+
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0 none;
+  background-color: transparent;
+  vertical-align: middle;
+  color: #333;
+  font-family: "Noto Sans KR", "Malgun Gothic", Dotum, sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  outline: none; }
+
+figcaption {
+  display: none; }
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+/* ================================== common ================================== */
+html,
+body {
+  background: #000;
+  overflow-x: hidden; }
+
+#webzineWrap {
+  width: 100%;
+  height: 100%;
+  opacity: 0; }
+
+/* header */
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-width: 1000px;
+  height: 80px;
+  background: rgba(14, 5, 10, 0.7);
+  z-index: 999;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease; }
+  #header h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin-left: -650px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    z-index: 9999; }
+  #header #nav {
+    width: 838px;
+    margin: 0 auto; }
+    #header #nav ul:after {
+      content: '';
+      display: table;
+      clear: both; }
+    #header #nav li {
+      position: relative;
+      float: left;
+      display: inline-block;
+      height: 80px;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease; }
+      #header #nav li:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 1px;
+        height: 14px;
+        background: rgba(106, 92, 99, 0.5);
+        transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%); }
+      #header #nav li:first-child:before {
+        display: none; }
+      #header #nav li a {
+        display: block;
+        width: 100%;
+        text-align: center; }
+  #header.fixed {
+    background: rgba(14, 5, 10, 0.8); }
+    #header.fixed #nav li a {
+      color: #fff; }
+
+/* Section */
+section {
+  width: 100%;
+  min-width: 1000px;
+  min-height: 768px; }
+  section .contentWrap {
+    position: relative;
+    max-width: 1600px;
+    min-width: 1000px;
+    height: 100%;
+    margin: 0 auto; }
+    section .contentWrap h1 {
+      padding: 73px 0 29px;
+      text-align: center; }
+    section .contentWrap .subExplan {
+      padding-bottom: 8px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 100;
+      letter-spacing: -0.05em;
+      color: #ededed; }
+    section .contentWrap .subTip {
+      padding-bottom: 13px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 100;
+      letter-spacing: -0.05em;
+      color: #cacaca; }
+    section .contentWrap h2 {
+      text-align: center; }
+  section#main {
+    min-height: 1385px;
+    background: url("../img/bg_main.jpg") no-repeat center top; }
+  section#halloweenZone {
+    min-height: 1546px;
+    background: url("../img/bg_halloweenzone.jpg") no-repeat center top; }
+  section#horrorRide {
+    min-height: 2261px;
+    background: url("../img/bg_horrorride.jpg") no-repeat center top; }
+  section#entertainment {
+    min-height: 998px;
+    background: url("../img/bg_entertainment.jpg") no-repeat center top; }
+  section#costumePlay {
+    min-height: 791px;
+    background: url("../img/bg_costumeplay.jpg") no-repeat center top; }
+  section#halloweenGood {
+    min-height: 753px;
+    background: url("../img/bg_halloweengood.jpg") no-repeat center top; }
+  section#infomation {
+    min-height: 2693px;
+    background: url("../img/bg_infomation.jpg") no-repeat center top; }
+
+/* move Top */
+.moveTop {
+  position: fixed;
+  left: 50%;
+  bottom: 95px;
+  display: block;
+  width: 80px;
+  height: 120px;
+  margin-left: 604px;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  background: url("../img/btn_movetop.png") no-repeat center center;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 9999; }
+
+/* Glitch Effect */
+.glitchText,
+.glitchImg {
+  position: relative;
+  display: inline-block;
+  font-size: 45px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  z-index: 1; }
+
+.glitchText {
+  padding-right: 2px; }
+
+.glitchText .glitchBefore,
+.glitchText .glitchAfter,
+.glitchImg .glitchBefore,
+.glitchImg .glitchAfter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-style: normal;
+  opacity: 0; }
+
+.glitchText .glitchBefore,
+.glitchImg .glitchBefore {
+  color: #AFFFDF;
+  z-index: -1; }
+
+.glitchText .glitchAfter,
+.glitchImg .glitchAfter {
+  color: #FC335C;
+  z-index: -2; }
+
+/* spark Effect */
+#sparkWrap {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  z-index: 5; }
+  #sparkWrap .spark {
+    background-color: #de4a00;
+    visibility: hidden;
+    position: absolute;
+    width: 6px;
+    height: 8px;
+    border-radius: 30%;
+    box-shadow: 0 0 16px #ab000b; }
+
+/* position */
+.posRelative {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.posAbsolute {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+/* content description */
+.descList > * {
+  padding: 10px 0;
+  letter-spacing: -0.05em; }
+.descList dt {
+  margin-top: 13px;
+  font-size: 22px;
+  color: #ebebeb;
+  background: url("../img/desc_dt_line.png") no-repeat left bottom; }
+.descList dd {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.06em;
+  color: #cacaca; }
+  .descList dd .place {
+    margin-top: 8px; }
+
+.attention {
+  margin-top: 21px;
+  padding-top: 20px;
+  background: url("../img/attention_line.png") no-repeat 1px top; }
+  .attention > * {
+    font-size: 18px;
+    letter-spacing: -0.05em; }
+  .attention dt {
+    color: #9a1014;
+    font-weight: 400; }
+  .attention dd {
+    color: #cacaca; }
+    .attention dd ul li {
+      position: relative;
+      padding: 1px 0 2px;
+      padding-left: 10px; }
+      .attention dd ul li:before {
+        content: '*';
+        position: absolute;
+        top: 4px;
+        left: 0; }
+
+/* layer popup button */
+.btnView {
+  display: inline-block;
+  width: 145px;
+  height: 60px; }
+  .btnView.photoPop {
+    background: url("../img/btn_photo.png") no-repeat center center; }
+  .btnView.guidePop {
+    background: url("../img/btn_guide.png") no-repeat center center; }
+  .btnView.experiencePop {
+    background: url("../img/btn_experience.png") no-repeat center center; }
+  .btnView.detailView {
+    background: url("../img/btn_detailview.png") no-repeat center center; }
+
+/* layer popop modal */
+.modalOverlay {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: #000;
+  opacity: 0;
+  z-index: 9998; }
+
+.popupWrap {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 9999; }
+  .popupWrap.popupPhoto .pfHandLeft {
+    position: absolute;
+    left: -27px;
+    top: 24px;
+    display: block;
+    width: 48px;
+    height: 92px;
+    background: url("../img/pf_hand_left.png") no-repeat left top;
+    z-index: 1; }
+  .popupWrap.popupPhoto .pfHandRight {
+    position: absolute;
+    right: -28px;
+    bottom: 41px;
+    display: block;
+    width: 48px;
+    height: 92px;
+    background: url("../img/pf_hand_right.png") no-repeat left top;
+    z-index: 1; }
+  .popupWrap.popupPhoto .fTop {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    display: block;
+    width: auto;
+    height: 16px;
+    background: url("../img/f_top.png") no-repeat center top;
+    background-size: 100% 16px; }
+    .popupWrap.popupPhoto .fTop:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: auto;
+      bottom: auto;
+      left: -16px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../img/f_top_left.png") no-repeat left top; }
+    .popupWrap.popupPhoto .fTop:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -16px;
+      bottom: auto;
+      left: auto;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../img/f_top_right.png") no-repeat right top; }
+  .popupWrap.popupPhoto .fRight {
+    position: absolute;
+    top: 0;
+    right: -16px;
+    bottom: 0;
+    left: auto;
+    display: block;
+    width: 16px;
+    height: auto;
+    background: url("../img/f_right.png") no-repeat right center;
+    background-size: 16px 100%; }
+  .popupWrap.popupPhoto .fBottom {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: -16px;
+    left: 0;
+    display: block;
+    width: auto;
+    height: 16px;
+    background: url("../img/f_bottom.png") no-repeat center bottom;
+    background-size: 100% 16px; }
+    .popupWrap.popupPhoto .fBottom:before {
+      content: '';
+      position: absolute;
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: -16px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../img/f_bottom_left.png") no-repeat left bottom; }
+    .popupWrap.popupPhoto .fBottom:after {
+      content: '';
+      position: absolute;
+      top: auto;
+      right: -16px;
+      bottom: 0;
+      left: auto;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../img/f_bottom_right.png") no-repeat right bottom; }
+  .popupWrap.popupPhoto .fLeft {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: -16px;
+    display: block;
+    width: 16px;
+    height: auto;
+    background: url("../img/f_left.png") no-repeat left center;
+    background-size: 16px 100%; }
+  .popupWrap.popupPhoto .photoSlide {
+    width: 640px;
+    height: 360px; }
+  .popupWrap.popupPhoto .popupClose {
+    position: absolute;
+    right: -87px;
+    top: -14px;
+    display: block;
+    width: 72px;
+    height: 72px;
+    background: url("../img/btn_photo_close.png") no-repeat center center; }
+  .popupWrap.popupGuide .guideBox {
+    position: relative;
+    width: 502px;
+    max-height: 700px;
+    background: url("../img/bg_guide_top.png") no-repeat left top; }
+    .popupWrap.popupGuide .guideBox:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -30px;
+      display: block;
+      width: 502px;
+      height: 150px;
+      background: url("../img/bg_guide_bottom.png") no-repeat left bottom;
+      z-index: 1; }
+    .popupWrap.popupGuide .guideBox .guideContent {
+      position: absolute;
+      top: 44px;
+      left: 44px;
+      z-index: 2; }
+      .popupWrap.popupGuide .guideBox .guideContent dl {
+        display: table;
+        width: 430px;
+        margin-top: 4px;
+        letter-spacing: -0.08em; }
+        .popupWrap.popupGuide .guideBox .guideContent dl dt {
+          display: table-cell;
+          width: 100px;
+          color: #ffecc6;
+          font-size: 15px; }
+          .popupWrap.popupGuide .guideBox .guideContent dl dt span {
+            display: block;
+            width: 90px;
+            height: 38px;
+            padding: 9px 12px;
+            background: url("../img/bg_guide_dt.png") no-repeat left top;
+            box-sizing: border-box; }
+        .popupWrap.popupGuide .guideBox .guideContent dl dd {
+          display: table-cell;
+          color: #111;
+          font-size: 16px;
+          line-height: 1.4;
+          word-break: keep-all; }
+          .popupWrap.popupGuide .guideBox .guideContent dl dd ul li {
+            position: relative;
+            padding-bottom: 8px;
+            padding-left: 9px; }
+            .popupWrap.popupGuide .guideBox .guideContent dl dd ul li:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 10px;
+              display: block;
+              width: 2px;
+              height: 2px;
+              border-radius: 50%;
+              background: #111; }
+          .popupWrap.popupGuide .guideBox .guideContent dl dd .small {
+            position: relative;
+            display: block;
+            margin-top: 2px;
+            padding-left: 8px;
+            color: #786260;
+            font-size: 14px;
+            line-height: 1.6; }
+            .popupWrap.popupGuide .guideBox .guideContent dl dd .small:before {
+              content: '*';
+              position: absolute;
+              top: 3px;
+              left: 0; }
+            .popupWrap.popupGuide .guideBox .guideContent dl dd .small strong {
+              color: #614d4a;
+              font-weight: 400; }
+            .popupWrap.popupGuide .guideBox .guideContent dl dd .small br + span {
+              padding-left: 59px; }
+          .popupWrap.popupGuide .guideBox .guideContent dl dd .point {
+            color: #ae1d1a;
+            font-weight: 400; }
+  .popupWrap.popupGuide .popupClose {
+    position: absolute;
+    right: 39px;
+    top: 48px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url("../img/btn_guide_close.png") no-repeat center center;
+    z-index: 3; }
+
+/**** slick-theme custom ****/
+/** Arrows **/
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 78px;
+  height: 78px;
+  padding: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+  z-index: 9; }
+
+.slick-disabled {
+  opacity: 0; }
+
+/** Dot **/
+.slick-dots {
+  position: absolute;
+  left: 50%;
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  z-index: 9; }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer; }
+    .slick-dots li button {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      color: transparent;
+      font-size: 0;
+      line-height: 0;
+      border: 0;
+      outline: none; }
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+          opacity: 1; }
+      .slick-dots li button:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '';
+        text-align: center;
+        border-radius: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+
+.photoSlide .slick-dots {
+  bottom: -40px; }
+  .photoSlide .slick-dots li button {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    background: transparent; }
+    .photoSlide .slick-dots li button:before {
+      width: 10px;
+      height: 10px;
+      background: transparent;
+      border: 1px solid #ff8a00;
+      box-sizing: border-box; }
+  .photoSlide .slick-dots li.slick-active button:before {
+    border: none;
+    background: #ff8a00 url("../img/popup_slick_dots_active.png") no-repeat center center;
+    box-shadow: 0 0 12px #9c0113;
+    -webkit-box-shadow: 0 0 12px #9c0113;
+    -moz-box-shadow: 0 0 12px #9c0113; }
+
+/* ================================== intro ================================== */
+.introTitleWrap {
+  position: absolute;
+  left: 50%;
+  top: -100px;
+  display: block;
+  width: 780px;
+  height: 470px;
+  margin-left: -170px;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  background: url("../img/intro_title.png") no-repeat center center;
+  z-index: 10;
+  opacity: 0; }
+  .introTitleWrap .titleSpark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 780px;
+    height: 470px;
+    background: url("../img/intro_title_spark.png") no-repeat center center;
+    opacity: 0;
+    z-index: 12; }
+  .introTitleWrap .titleA {
+    position: absolute;
+    left: 180px;
+    top: 300px;
+    display: block;
+    width: 110px;
+    height: 100px;
+    background: url("../img/intro_title_a.png") no-repeat center center;
+    opacity: 0;
+    z-index: 11; }
+  .introTitleWrap .titleG {
+    position: absolute;
+    left: 490px;
+    top: 275px;
+    display: block;
+    width: 110px;
+    height: 100px;
+    background: url("../img/intro_title_g.png") no-repeat center center;
+    opacity: 0;
+    z-index: 11; }
+
+.introText {
+  position: absolute;
+  left: 50%;
+  top: 510px;
+  display: block;
+  width: 615px;
+  height: 65px;
+  margin-top: -5px;
+  margin-left: -180px;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  background: url("../img/intro_text.png") no-repeat center center;
+  z-index: 10;
+  opacity: 0; }
+
+.introBtn {
+  position: absolute;
+  left: 50%;
+  top: 615px;
+  display: block;
+  width: 129px;
+  height: 60px;
+  margin-top: -5px;
+  margin-left: -425px;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer; }
+
+.introDim {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: url("../img/intro_dim.png") no-repeat center center;
+  background-size: cover;
+  z-index: 4; }
+
+.introPoliceLine {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: url("../img/intro_police_line.png") no-repeat center center;
+  background-size: cover;
+  z-index: 3;
+  opacity: 0; }
+
+.introBgLeft {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: url("../img/intro_left.png") no-repeat center center;
+  background-size: cover;
+  z-index: 2;
+  opacity: 0; }
+
+.introBgRight {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: url("../img/intro_right.png") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0; }
+
+.introBg {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: url("../img/bg_intro.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 0; }
+
+#sparkWrap.intro {
+  z-index: 5; }
+
+/* ================================== main ================================== */
+.mainDimLeft,
+.mainDimRight {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 100px;
+  height: 100%;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  z-index: 99; }
+
+.mainDimLeft {
+  margin-left: -750px;
+  background: url("../img/main_dim_left.png") repeat-y left top; }
+
+.mainDimRight {
+  margin-left: 750px;
+  background: url("../img/main_dim_right.png") repeat-y right top; }
+
+.mainVisualWrap {
+  position: relative;
+  width: 100%;
+  height: 900px; }
+  .mainVisualWrap .mainTitleWrap {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    display: block;
+    width: 780px;
+    height: 375px;
+    margin-left: 60px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    opacity: 1; }
+    .mainVisualWrap .mainTitleWrap .mainTitle {
+      position: absolute;
+      left: 140px;
+      bottom: 45px;
+      display: block;
+      width: 390px;
+      height: 250px;
+      background: url("../img/main_title.png") no-repeat center center;
+      z-index: 1; }
+    .mainVisualWrap .mainTitleWrap .titleI {
+      position: absolute;
+      left: 220px;
+      bottom: 45px;
+      display: block;
+      width: 60px;
+      height: 110px;
+      background: url("../img/main_title_i.png") no-repeat center center;
+      z-index: 2; }
+    .mainVisualWrap .mainTitleWrap .subTitle {
+      position: absolute;
+      right: 80px;
+      top: 0;
+      display: block;
+      width: 215px;
+      height: 255px;
+      background: url("../img/main_subtitle.png") no-repeat center center;
+      z-index: 2; }
+    .mainVisualWrap .mainTitleWrap .titleSpark {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 780px;
+      height: 375px;
+      background: url("../img/main_title_spark.png") no-repeat center center;
+      z-index: 3; }
+  .mainVisualWrap .mainZombieLeft {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    display: block;
+    width: 555px;
+    height: 540px;
+    margin-left: -522px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/main_zombie_left.png") no-repeat center center;
+    z-index: 1; }
+  .mainVisualWrap .mainZombieRight {
+    position: absolute;
+    left: 50%;
+    bottom: 55px;
+    display: block;
+    width: 460px;
+    height: 350px;
+    margin-left: 570px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/main_zombie_right.png") no-repeat center center;
+    z-index: 1; }
+  .mainVisualWrap .mainPoliceLine {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    display: block;
+    width: 100%;
+    height: 160px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/main_police_line.png") no-repeat center center;
+    background-size: cover;
+    z-index: 2; }
+  .mainVisualWrap .mainZombieCenter1 {
+    position: absolute;
+    left: 50%;
+    bottom: 21px;
+    display: block;
+    width: 390px;
+    height: 560px;
+    margin-left: 202px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/main_zombie_center1.png") no-repeat center center;
+    z-index: 8; }
+  .mainVisualWrap .mainZombieCenter2 {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: block;
+    width: 430px;
+    height: 580px;
+    margin-left: -105px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/main_zombie_center2.png") no-repeat center center;
+    z-index: 9; }
+    .mainVisualWrap .mainZombieCenter2 .mainPeriod {
+      position: absolute;
+      left: -115px;
+      top: -18px;
+      display: block;
+      width: 165px;
+      height: 66px;
+      background: url("../img/main_period.png") no-repeat center center;
+      z-index: 10; }
+  .mainVisualWrap .mainSmoke {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 440px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/main_smoke.png") no-repeat center center;
+    background-size: cover;
+    z-index: 5; }
+  .mainVisualWrap .mainWire {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    display: block;
+    width: 100%;
+    height: 170px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/main_wire.png") no-repeat center center;
+    background-size: cover;
+    z-index: 6; }
+  .mainVisualWrap .mainCurtain {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 900px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/main_curtain.png") no-repeat center center;
+    background-size: cover;
+    z-index: 7; }
+
+.VideoWrap {
+  position: absolute;
+  top: 708px;
+  left: 50%;
+  display: block;
+  width: 672px;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  z-index: 10; }
+  .VideoWrap .VideoFrame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 16px; }
+    .VideoWrap .VideoFrame .vfHandTop {
+      position: absolute;
+      left: 30px;
+      top: -7px;
+      display: block;
+      width: 74px;
+      height: 38px;
+      background: url("../img/vf_hand_top.png") no-repeat left top;
+      z-index: 15; }
+    .VideoWrap .VideoFrame .vfHandLeft {
+      position: absolute;
+      left: -19px;
+      top: 64px;
+      display: block;
+      width: 65px;
+      height: 125px;
+      background: url("../img/vf_hand_left.png") no-repeat left top;
+      z-index: 15; }
+    .VideoWrap .VideoFrame .fTop {
+      position: absolute;
+      top: 0;
+      right: 16px;
+      bottom: auto;
+      left: 16px;
+      display: block;
+      width: auto;
+      height: 16px;
+      background: url("../img/f_top.png") no-repeat center top;
+      background-size: 100% 16px; }
+      .VideoWrap .VideoFrame .fTop:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: -16px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url("../img/f_top_left.png") no-repeat left top; }
+      .VideoWrap .VideoFrame .fTop:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -16px;
+        bottom: auto;
+        left: auto;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url("../img/f_top_right.png") no-repeat right top; }
+    .VideoWrap .VideoFrame .fRight {
+      position: absolute;
+      top: 16px;
+      right: 0;
+      bottom: 16px;
+      left: auto;
+      display: block;
+      width: 16px;
+      height: auto;
+      background: url("../img/f_right.png") no-repeat right center;
+      background-size: 16px 100%; }
+    .VideoWrap .VideoFrame .fBottom {
+      position: absolute;
+      top: auto;
+      right: 16px;
+      bottom: 0;
+      left: 16px;
+      display: block;
+      width: auto;
+      height: 16px;
+      background: url("../img/f_bottom.png") no-repeat center bottom;
+      background-size: 100% 16px; }
+      .VideoWrap .VideoFrame .fBottom:before {
+        content: '';
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: -16px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url("../img/f_bottom_left.png") no-repeat left bottom; }
+      .VideoWrap .VideoFrame .fBottom:after {
+        content: '';
+        position: absolute;
+        top: auto;
+        right: -16px;
+        bottom: 0;
+        left: auto;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url("../img/f_bottom_right.png") no-repeat right bottom; }
+    .VideoWrap .VideoFrame .fLeft {
+      position: absolute;
+      top: 16px;
+      right: auto;
+      bottom: 16px;
+      left: 0;
+      display: block;
+      width: 16px;
+      height: auto;
+      background: url("../img/f_left.png") no-repeat left center;
+      background-size: 16px 100%; }
+  .VideoWrap .youtubeWrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    background: #000; }
+    .VideoWrap .youtubeWrap iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 11; }
+    .VideoWrap .youtubeWrap .youtubeLink {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: url("../img/bg_youtube_link.jpg") no-repeat left center;
+      z-index: 10; }
+
+.prologWrap {
+  width: 100%;
+  text-align: center;
+  padding-top: 224px;
+  overflow: hidden; }
+  .prologWrap .paragraph {
+    padding-top: 14px; }
+    .prologWrap .paragraph:first-child {
+      padding-top: 0; }
+  .prologWrap p {
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.6;
+    letter-spacing: -0.05em;
+    color: #ededed; }
+    .prologWrap p .point {
+      color: #ab1c00; }
+    .prologWrap p img {
+      margin: 0 0 -4px 3px;
+      vertical-align: baseline; }
+
+/* ================================== halloweenZone ================================== */
+#halloweenZone .zoneInfoWrap {
+  width: 904px;
+  margin: 0 auto;
+  padding-top: 90px;
+  background: url("../img/local_map.png") no-repeat right bottom; }
+#halloweenZone .zoneInfo {
+  margin-top: 21px; }
+  #halloweenZone .zoneInfo:first-child {
+    margin-top: 0; }
+  #halloweenZone .zoneInfo .ulTitle {
+    position: relative;
+    padding-left: 20px;
+    font-size: 18px;
+    letter-spacing: -0.05em; }
+    #halloweenZone .zoneInfo .ulTitle:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      display: block;
+      width: 11px;
+      height: 11px;
+      transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -webkit-transform: translate(0, -50%);
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 50%; }
+  #halloweenZone .zoneInfo ul {
+    margin-top: 7px; }
+    #halloweenZone .zoneInfo ul li {
+      padding-top: 1px;
+      font-size: 18px;
+      letter-spacing: -0.05em;
+      color: #cacaca; }
+  #halloweenZone .zoneInfo.newContent .ulTitle {
+    color: #ff8888; }
+    #halloweenZone .zoneInfo.newContent .ulTitle:before {
+      border-color: #b70000;
+      background: #8e0000; }
+  #halloweenZone .zoneInfo.attraction .ulTitle {
+    color: #ffde97; }
+    #halloweenZone .zoneInfo.attraction .ulTitle:before {
+      border-color: #9d0b0f;
+      background: #6b0505; }
+  #halloweenZone .zoneInfo.entertainment .ulTitle {
+    color: #43ccff; }
+    #halloweenZone .zoneInfo.entertainment .ulTitle:before {
+      border-color: #0c2cbe;
+      background: #1f0a9d; }
+  #halloweenZone .zoneInfo.entertainment ul li {
+    padding-top: 11px; }
+    #halloweenZone .zoneInfo.entertainment ul li:first-child {
+      padding-top: 1px; }
+    #halloweenZone .zoneInfo.entertainment ul li span {
+      display: block;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #95a3a9; }
+#halloweenZone .zonePhotoWrap {
+  position: absolute;
+  left: 50%;
+  width: 904px;
+  margin-top: 81px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  z-index: 9; }
+  #halloweenZone .zonePhotoWrap:after {
+    content: '';
+    display: table;
+    clear: both; }
+  #halloweenZone .zonePhotoWrap .zonePhoto {
+    float: left;
+    width: 231px; }
+    #halloweenZone .zonePhotoWrap .zonePhoto:last-child, #halloweenZone .zonePhotoWrap .zonePhoto + .zonePhoto + .zonePhoto + .zonePhoto {
+      width: 211px; }
+  #halloweenZone .zonePhotoWrap .photoThumb {
+    position: relative; }
+    #halloweenZone .zonePhotoWrap .photoThumb .thumbCover {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 211px;
+      height: 145px;
+      z-index: 1; }
+  #halloweenZone .zonePhotoWrap .descList dd {
+    min-height: 150px;
+    line-height: 1.45; }
+  #halloweenZone .zonePhotoWrap button {
+    margin-top: 7px; }
+
+/* ================================== horrorRide ================================== */
+#horrorRide .rideDescWrap {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  display: block;
+  width: 320px;
+  height: auto;
+  margin-left: 337px;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  z-index: 9; }
+  #horrorRide .rideDescWrap button {
+    margin-top: 4px; }
+  #horrorRide .rideDescWrap .descList dd .partner {
+    display: block;
+    margin-top: 12px; }
+#horrorRide .rideWrap {
+  position: relative;
+  height: 430px; }
+  #horrorRide .rideWrap.texpress {
+    margin-bottom: 36px;
+    background: url("../img/horride_texpress.png") no-repeat center bottom; }
+    #horrorRide .rideWrap.texpress .rideSlogan {
+      position: absolute;
+      left: 50%;
+      bottom: 29px;
+      display: block;
+      width: 385px;
+      height: 79px;
+      margin-left: 413px;
+      transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      background: url("../img/horride_texpress_slogan.png") no-repeat left top; }
+    #horrorRide .rideWrap.texpress .rideDescWrap {
+      top: 82px; }
+  #horrorRide .rideWrap.amazon {
+    margin-bottom: 55px;
+    background: url("../img/horride_amazon.png") no-repeat center bottom; }
+    #horrorRide .rideWrap.amazon .rideSlogan {
+      position: absolute;
+      left: 50%;
+      bottom: 48px;
+      display: block;
+      width: 433px;
+      height: 102px;
+      margin-left: -174px;
+      transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      background: url("../img/horride_amazon_slogan.png") no-repeat left top; }
+    #horrorRide .rideWrap.amazon .rideDescWrap {
+      top: 80px; }
+  #horrorRide .rideWrap.maze {
+    margin-bottom: 41px;
+    background: url("../img/horride_maze.png") no-repeat center bottom; }
+    #horrorRide .rideWrap.maze .rideSlogan {
+      position: absolute;
+      left: 50%;
+      top: 92px;
+      display: block;
+      width: 291px;
+      height: 79px;
+      margin-left: 52px;
+      transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      background: url("../img/horride_maze_slogan.png") no-repeat left top; }
+    #horrorRide .rideWrap.maze .rideDescWrap {
+      top: 45px; }
+  #horrorRide .rideWrap.safari {
+    background: url("../img/horride_safari.png") no-repeat center bottom; }
+    #horrorRide .rideWrap.safari .rideSlogan {
+      position: absolute;
+      left: 50%;
+      top: 98px;
+      display: block;
+      width: 353px;
+      height: 79px;
+      margin-left: -55px;
+      transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      background: url("../img/horride_safari_slogan.png") no-repeat left top; }
+    #horrorRide .rideWrap.safari .rideDescWrap {
+      top: 58px; }
+  #horrorRide .rideWrap:nth-child(2n+1) .rideDescWrap {
+    margin-left: -292px; }
+#horrorRide .spark {
+  position: absolute;
+  left: 50%;
+  top: 540px;
+  display: block;
+  width: 480px;
+  height: 520px;
+  margin-left: 560px;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  background: url("../img/horride_spark.png") no-repeat center center;
+  z-index: 1; }
+
+#horrorRridePopup12 .guideBox {
+  height: 472px; }
+
+#horrorRridePopup22 .guideBox {
+  height: 472px; }
+
+#horrorRridePopup32 .guideBox {
+  height: 410px; }
+
+#horrorRridePopup42 .guideBox {
+  height: 593px; }
+
+/* ================================== entertainment ================================== */
+#entertainment .entertainSlideWrap {
+  position: absolute;
+  left: 50%;
+  width: 891px;
+  height: 521px;
+  margin-top: 67px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  z-index: 9; }
+  #entertainment .entertainSlideWrap .cfTop {
+    position: absolute;
+    top: -17px;
+    right: 12px;
+    bottom: auto;
+    left: 12px;
+    display: block;
+    width: auto;
+    height: 29px;
+    background: url("../img/cf_top.png") no-repeat center top;
+    background-size: 100% 29px; }
+    #entertainment .entertainSlideWrap .cfTop:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: auto;
+      bottom: auto;
+      left: -29px;
+      display: block;
+      width: 29px;
+      height: 29px;
+      background: url("../img/cf_top_left.png") no-repeat left top; }
+    #entertainment .entertainSlideWrap .cfTop:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -29px;
+      bottom: auto;
+      left: auto;
+      display: block;
+      width: 29px;
+      height: 29px;
+      background: url("../img/cf_top_right.png") no-repeat right top; }
+  #entertainment .entertainSlideWrap .cfRight {
+    position: absolute;
+    top: 12px;
+    right: -17px;
+    bottom: 12px;
+    left: auto;
+    display: block;
+    width: 29px;
+    height: auto;
+    background: url("../img/cf_right.png") no-repeat right center;
+    background-size: 29px 100%; }
+  #entertainment .entertainSlideWrap .cfBottom {
+    position: absolute;
+    top: auto;
+    right: 12px;
+    bottom: -17px;
+    left: 12px;
+    display: block;
+    width: auto;
+    height: 29px;
+    background: url("../img/cf_bottom.png") no-repeat center bottom;
+    background-size: 100% 29px; }
+    #entertainment .entertainSlideWrap .cfBottom:before {
+      content: '';
+      position: absolute;
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: -29px;
+      display: block;
+      width: 29px;
+      height: 29px;
+      background: url("../img/cf_bottom_left.png") no-repeat left bottom; }
+    #entertainment .entertainSlideWrap .cfBottom:after {
+      content: '';
+      position: absolute;
+      top: auto;
+      right: -29px;
+      bottom: 0;
+      left: auto;
+      display: block;
+      width: 29px;
+      height: 29px;
+      background: url("../img/cf_bottom_right.png") no-repeat right bottom; }
+  #entertainment .entertainSlideWrap .cfLeft {
+    position: absolute;
+    top: 12px;
+    right: auto;
+    bottom: 12px;
+    left: -17px;
+    display: block;
+    width: 29px;
+    height: auto;
+    background: url("../img/cf_left.png") no-repeat left center;
+    background-size: 29px 100%; }
+#entertainment .entertainSlide {
+  width: 891px;
+  height: 521px; }
+  #entertainment .entertainSlide .slideItem {
+    position: relative;
+    width: 891px;
+    height: 521px; }
+#entertainment .entCrazy {
+  background: url("../img/bg_entertain_crazy.jpg") no-repeat center center; }
+  #entertainment .entCrazy .entSlogan {
+    position: absolute;
+    right: 33px;
+    top: 28px;
+    display: block;
+    width: 293px;
+    height: 79px;
+    background: url("../img/entertain_crazy_slogan.png") no-repeat left top; }
+  #entertainment .entCrazy .entertainDescWrap .attention {
+    margin-top: 80px; }
+#entertainment .entDevils {
+  background: url("../img/bg_entertain_devils.jpg") no-repeat center center; }
+  #entertainment .entDevils .entSlogan {
+    position: absolute;
+    right: 24px;
+    top: 28px;
+    display: block;
+    width: 313px;
+    height: 103px;
+    background: url("../img/entertain_devils_slogan.png") no-repeat left top; }
+#entertainment .entGiant {
+  background: url("../img/bg_entertain_giant.jpg") no-repeat center center; }
+  #entertainment .entGiant .entSlogan {
+    position: absolute;
+    right: 24px;
+    top: 28px;
+    display: block;
+    width: 283px;
+    height: 79px;
+    background: url("../img/entertain_giant_slogan.png") no-repeat left top; }
+  #entertainment .entGiant .entertainDescWrap .attention {
+    margin-top: 145px; }
+#entertainment .entertainDescWrap {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  display: block;
+  width: 340px;
+  height: auto; }
+  #entertainment .entertainDescWrap button {
+    margin-top: 4px; }
+  #entertainment .entertainDescWrap .attention {
+    margin-top: 23px;
+    padding-top: 23px; }
+
+/**** slick-theme custom ****/
+.entertainSlide .slick-prev {
+  margin-left: -496px;
+  background: url(../img/entertain_slick_prev.png) no-repeat 50% 50%; }
+.entertainSlide .slick-next {
+  margin-left: 497px;
+  background: url(../img/entertain_slick_next.png) no-repeat 50% 50%; }
+.entertainSlide .slick-dots {
+  bottom: -43px; }
+  .entertainSlide .slick-dots li button {
+    width: 49px;
+    height: 28px;
+    background: transparent; }
+    .entertainSlide .slick-dots li button:before {
+      width: 49px;
+      height: 28px;
+      border-radius: 0;
+      background: url("../img/entertain_slick_dots.png") no-repeat center center;
+      box-sizing: border-box; }
+  .entertainSlide .slick-dots li.slick-active button:before {
+    background: url("../img/entertain_slick_dots_active.png") no-repeat center center; }
+
+/* ================================== costumePlay ================================== */
+#costumePlay .contentWrap h1 {
+  padding: 63px 0 29px; }
+#costumePlay .makeupDescWrap {
+  position: absolute;
+  left: 50%;
+  top: 39px;
+  display: block;
+  width: 320px;
+  height: auto;
+  margin-left: -292px;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  z-index: 9; }
+  #costumePlay .makeupDescWrap button {
+    margin-top: 4px; }
+#costumePlay .makeupWrap {
+  position: relative;
+  height: 430px;
+  margin-bottom: 100px;
+  background: url("../img/cosplay_makeup.png") no-repeat center bottom; }
+  #costumePlay .makeupWrap .makeupSlogan {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    display: block;
+    width: 259px;
+    height: 79px;
+    margin-left: 37px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/cosplay_makeup_slogan.png") no-repeat left top; }
+#costumePlay .cosplayListWrap {
+  position: relative; }
+  #costumePlay .cosplayListWrap ul {
+    width: 945px;
+    margin: 0 auto; }
+    #costumePlay .cosplayListWrap ul:after {
+      content: '';
+      display: table;
+      clear: both; }
+    #costumePlay .cosplayListWrap ul li {
+      float: left;
+      width: 271px;
+      margin: 32px 22px 0;
+      padding-bottom: 5px;
+      text-align: center;
+      color: #acacac;
+      font-size: 18px;
+      line-height: 1.3; }
+      #costumePlay .cosplayListWrap ul li .cosplayPhoto {
+        margin-bottom: 12px; }
+      #costumePlay .cosplayListWrap ul li .price {
+        margin-top: 1px;
+        color: #eb7f28;
+        font-weight: 400; }
+  #costumePlay .cosplayListWrap .pfHandLeft {
+    position: absolute;
+    left: 50%;
+    top: 22px;
+    display: block;
+    width: 48px;
+    height: 92px;
+    margin-left: -450px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/pf_hand_left.png") no-repeat left top;
+    z-index: 1; }
+  #costumePlay .cosplayListWrap .pfHandRight {
+    position: absolute;
+    left: 50%;
+    bottom: 51px;
+    display: block;
+    width: 48px;
+    height: 92px;
+    margin-left: 449px;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    background: url("../img/pf_hand_right.png") no-repeat left top;
+    z-index: 1; }
+
+#costumePlayPopup2 .guideBox {
+  height: 262px; }
+
+/* ================================== halloweenGood ================================== */
+#halloweenGood .mdShopWrap {
+  position: relative;
+  width: 986px;
+  margin: 0 auto;
+  margin-top: 55px;
+  text-align: center; }
+  #halloweenGood .mdShopWrap .goodList {
+    position: relative;
+    width: 981px;
+    margin: 0 auto; }
+    #halloweenGood .mdShopWrap .goodList:after {
+      content: '';
+      display: table;
+      clear: both; }
+    #halloweenGood .mdShopWrap .goodList li {
+      position: relative;
+      float: left;
+      width: 240px;
+      height: 330px;
+      margin-left: 7px; }
+      #halloweenGood .mdShopWrap .goodList li:first-child {
+        margin-left: 0; }
+      #halloweenGood .mdShopWrap .goodList li:nth-child(odd) {
+        margin-top: 30px; }
+      #halloweenGood .mdShopWrap .goodList li.good1 {
+        background: url("../img/halgood_photo1.png") no-repeat left top; }
+      #halloweenGood .mdShopWrap .goodList li.good2 {
+        background: url("../img/halgood_photo2.png") no-repeat left top; }
+      #halloweenGood .mdShopWrap .goodList li.good3 {
+        background: url("../img/halgood_photo3.png") no-repeat left top; }
+      #halloweenGood .mdShopWrap .goodList li.good4 {
+        background: url("../img/halgood_photo4.png") no-repeat left top; }
+      #halloweenGood .mdShopWrap .goodList li p {
+        position: absolute;
+        left: 28px;
+        bottom: 28px;
+        display: block;
+        width: auto;
+        height: auto;
+        text-align: left;
+        line-height: 1.2; }
+        #halloweenGood .mdShopWrap .goodList li p .goodName {
+          display: block;
+          color: #efc34c;
+          font-size: 16px; }
+        #halloweenGood .mdShopWrap .goodList li p .goodPrice {
+          display: block;
+          color: #fff1ef;
+          font-size: 22px; }
+          #halloweenGood .mdShopWrap .goodList li p .goodPrice strong {
+            font-size: 36px;
+            font-weight: 300; }
+  #halloweenGood .mdShopWrap .moveBtn {
+    display: block;
+    width: 250px;
+    margin: 30px auto 0; }
+
+/* ================================== infomation ================================== */
+#infomation h1 + h2 {
+  margin-top: 37px; }
+#infomation .ticketWrap {
+  position: relative;
+  width: 986px;
+  margin: 0 auto; }
+  #infomation .ticketWrap .ticketSpecials,
+  #infomation .ticketWrap .ticketEverland,
+  #infomation .ticketWrap .ticketHorror {
+    position: relative;
+    display: block;
+    width: 986px;
+    padding: 0 40px; }
+    #infomation .ticketWrap .ticketSpecials h3,
+    #infomation .ticketWrap .ticketEverland h3,
+    #infomation .ticketWrap .ticketHorror h3 {
+      display: block;
+      padding-top: 30px;
+      height: 85px;
+      line-height: 55px;
+      text-align: center;
+      color: #efc34c;
+      font-size: 20px;
+      font-weight: 400; }
+    #infomation .ticketWrap .ticketSpecials .em,
+    #infomation .ticketWrap .ticketEverland .em,
+    #infomation .ticketWrap .ticketHorror .em {
+      font-weight: 400;
+      color: #d37327; }
+    #infomation .ticketWrap .ticketSpecials table,
+    #infomation .ticketWrap .ticketEverland table,
+    #infomation .ticketWrap .ticketHorror table {
+      padding: 0;
+      margin: 0;
+      border-collapse: collapse;
+      width: 100%; }
+    #infomation .ticketWrap .ticketSpecials th,
+    #infomation .ticketWrap .ticketSpecials td,
+    #infomation .ticketWrap .ticketEverland th,
+    #infomation .ticketWrap .ticketEverland td,
+    #infomation .ticketWrap .ticketHorror th,
+    #infomation .ticketWrap .ticketHorror td {
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.4;
+      text-align: center;
+      border-top: 1px solid transparent; }
+    #infomation .ticketWrap .ticketSpecials th,
+    #infomation .ticketWrap .ticketEverland th,
+    #infomation .ticketWrap .ticketHorror th {
+      color: #f6ebe9; }
+      #infomation .ticketWrap .ticketSpecials th span,
+      #infomation .ticketWrap .ticketEverland th span,
+      #infomation .ticketWrap .ticketHorror th span {
+        font-size: 16px; }
+    #infomation .ticketWrap .ticketSpecials td,
+    #infomation .ticketWrap .ticketEverland td,
+    #infomation .ticketWrap .ticketHorror td {
+      color: #cacaca; }
+    #infomation .ticketWrap .ticketSpecials tr.last td,
+    #infomation .ticketWrap .ticketEverland tr.last td,
+    #infomation .ticketWrap .ticketHorror tr.last td {
+      padding: 17px 0; }
+    #infomation .ticketWrap .ticketSpecials ul,
+    #infomation .ticketWrap .ticketEverland ul,
+    #infomation .ticketWrap .ticketHorror ul {
+      margin-top: 10px; }
+      #infomation .ticketWrap .ticketSpecials ul li,
+      #infomation .ticketWrap .ticketEverland ul li,
+      #infomation .ticketWrap .ticketHorror ul li {
+        position: relative;
+        padding-left: 12px;
+        color: #cacaca;
+        font-size: 18px;
+        letter-spacing: -0.05em; }
+        #infomation .ticketWrap .ticketSpecials ul li:before,
+        #infomation .ticketWrap .ticketEverland ul li:before,
+        #infomation .ticketWrap .ticketHorror ul li:before {
+          content: '';
+          position: absolute;
+          left: 3px;
+          top: 13px;
+          display: block;
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          background: #cacaca; }
+    #infomation .ticketWrap .ticketSpecials p,
+    #infomation .ticketWrap .ticketEverland p,
+    #infomation .ticketWrap .ticketHorror p {
+      color: #fff1ef;
+      font-size: 22px; }
+      #infomation .ticketWrap .ticketSpecials p strong,
+      #infomation .ticketWrap .ticketEverland p strong,
+      #infomation .ticketWrap .ticketHorror p strong {
+        font-size: 36px;
+        font-weight: 300; }
+      #infomation .ticketWrap .ticketSpecials p.small,
+      #infomation .ticketWrap .ticketEverland p.small,
+      #infomation .ticketWrap .ticketHorror p.small {
+        color: #9e9185;
+        font-size: 16px; }
+      #infomation .ticketWrap .ticketSpecials p.narrow,
+      #infomation .ticketWrap .ticketEverland p.narrow,
+      #infomation .ticketWrap .ticketHorror p.narrow {
+        margin-bottom: -9px; }
+  #infomation .ticketWrap .ticketSpecials {
+    height: 370px;
+    background: url("../img/bg_ticket_specials.png") no-repeat left top; }
+    #infomation .ticketWrap .ticketSpecials .specialsInfo {
+      padding: 32px 0 0 75px; }
+      #infomation .ticketWrap .ticketSpecials .specialsInfo .btnView {
+        position: absolute;
+        z-index: 9;
+        margin-top: 15px; }
+  #infomation .ticketWrap .ticketEverland {
+    height: 480px;
+    background: url("../img/bg_ticket_everland.png") no-repeat left top;
+    z-index: 9; }
+  #infomation .ticketWrap .ticketHorror {
+    height: 221px;
+    background: url("../img/bg_ticket_horror.png") no-repeat left top; }
+  #infomation .ticketWrap .ticketBanner {
+    position: relative;
+    display: block;
+    height: 138px; }
+    #infomation .ticketWrap .ticketBanner ul {
+      position: absolute;
+      left: 50%;
+      width: 905px;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      z-index: 9; }
+      #infomation .ticketWrap .ticketBanner ul:after {
+        content: '';
+        display: table;
+        clear: both; }
+      #infomation .ticketWrap .ticketBanner ul li {
+        float: left;
+        margin: 10px 0;
+        margin-left: 10px; }
+        #infomation .ticketWrap .ticketBanner ul li:first-child {
+          margin-left: 0; }
+        #infomation .ticketWrap .ticketBanner ul li a {
+          display: block;
+          width: 295px;
+          height: 116px;
+          padding: 30px 0 0 30px;
+          line-height: 1.2; }
+          #infomation .ticketWrap .ticketBanner ul li a .discountType {
+            display: block;
+            color: #c9584a;
+            font-size: 16px; }
+            #infomation .ticketWrap .ticketBanner ul li a .discountType em {
+              font-style: normal;
+              color: #efc34c; }
+          #infomation .ticketWrap .ticketBanner ul li a .discountPrice {
+            display: block;
+            color: #fff1ef;
+            font-size: 22px; }
+            #infomation .ticketWrap .ticketBanner ul li a .discountPrice strong {
+              font-size: 36px;
+              font-weight: 400; }
+        #infomation .ticketWrap .ticketBanner ul li.banner1 {
+          background: url("../img/bg_banner1.png") no-repeat left top; }
+        #infomation .ticketWrap .ticketBanner ul li.banner2 {
+          background: url("../img/bg_banner2.png") no-repeat left top; }
+        #infomation .ticketWrap .ticketBanner ul li.banner3 {
+          background: url("../img/bg_banner3.png") no-repeat left top; }
+  #infomation .ticketWrap .ticketCaution {
+    margin: 14px 0 42px;
+    padding-left: 41px; }
+    #infomation .ticketWrap .ticketCaution h3 {
+      margin-bottom: 6px;
+      color: #efc34c;
+      font-size: 20px;
+      font-weight: 400; }
+    #infomation .ticketWrap .ticketCaution ul li {
+      position: relative;
+      padding: 3px 0 2px;
+      padding-left: 9px;
+      color: #cacaca;
+      font-size: 18px;
+      letter-spacing: -0.05em; }
+      #infomation .ticketWrap .ticketCaution ul li:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 15px;
+        display: block;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background: #cacaca; }
+  #infomation .ticketWrap .ticketLink {
+    display: block;
+    width: 250px;
+    margin: 30px auto 0; }
+#infomation .faqWrap {
+  position: relative;
+  width: 986px;
+  height: 1268px;
+  margin: 0 auto;
+  padding-top: 29px;
+  background: url("../img/bg_faq.png") no-repeat left top; }
+  #infomation .faqWrap ul {
+    width: 904px;
+    margin: 0 auto; }
+    #infomation .faqWrap ul li {
+      padding-left: 73px; }
+      #infomation .faqWrap ul li:nth-child(1) {
+        height: 125px; }
+      #infomation .faqWrap ul li:nth-child(2) {
+        height: 155px; }
+      #infomation .faqWrap ul li:nth-child(3) {
+        height: 233px; }
+      #infomation .faqWrap ul li:nth-child(4) {
+        height: 182px; }
+      #infomation .faqWrap ul li:nth-child(5) {
+        height: 126px; }
+      #infomation .faqWrap ul li:nth-child(6) {
+        height: 153px; }
+      #infomation .faqWrap ul li:nth-child(7) {
+        height: 126px; }
+      #infomation .faqWrap ul li:nth-child(8) {
+        height: 128px; }
+  #infomation .faqWrap dl dt,
+  #infomation .faqWrap dl dd {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-left: 35px; }
+  #infomation .faqWrap dl dt {
+    position: relative;
+    padding-top: 34px;
+    padding-bottom: 2px;
+    color: #d37327;
+    font-weight: 500; }
+    #infomation .faqWrap dl dt:before {
+      content: 'Q.';
+      position: absolute;
+      left: 0;
+      top: 33px;
+      display: block;
+      width: 35px;
+      height: auto; }
+  #infomation .faqWrap dl dd {
+    color: #cacaca;
+    font-weight: 100; }
+#infomation .linkBtn {
+  position: absolute;
+  display: inline-block;
+  margin: 4px 0 0 8px;
+  padding: 0 6px;
+  height: 21px;
+  line-height: 19px;
+  color: #f08779;
+  font-size: 14px;
+  border: 1px solid #930000;
+  border-top: 1px solid #c43a3a;
+  border-left: 1px solid #b12424;
+  border-radius: 2px;
+  background: #930000;
+  z-index: 9; }
+#infomation .spark {
+  position: absolute;
+  left: 50%;
+  bottom: 190px;
+  display: block;
+  width: 510px;
+  height: 1280px;
+  margin-left: 545px;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  background: url("../img/infomation_spark.png") no-repeat center center; }
+
+/*# sourceMappingURL=halloween2018.css.map */
